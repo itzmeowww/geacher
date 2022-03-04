@@ -22,17 +22,22 @@ const TutorPage = () => {
 
     const [tutor, setTutor] = useState<Tutor>()
     const router = useRouter()
+
     const { id } = router.query
+
     useEffect(() => {
 
-        fetch(`https://geacher.vercel.app/api/getTutor/` + id).then((res) => {
+        if (id === undefined) return
+
+        const url = "https://geacher.vercel.app/api/getTutor/" + id
+
+        fetch(url).then((res) => {
             console.log(res)
             res.json().then((data) => {
                 setTutor(data)
             })
         })
-
-    }, [])
+    }, [id])
 
 
     return (
