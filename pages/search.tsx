@@ -55,8 +55,9 @@ const Search = ({ tutors, tutorStat }) => {
                 return (
 
                     <div className='flex flex-col items-center justify-center bg-white rounded-xl p-2'>
-                        <div className='w-60 h-60 bg-slate-400'>
 
+                        <div className='w-60 h-60 bg-slate-400'>
+                            <img src={tutor.poster} alt="" width="240" />
                         </div>
                         <div className='text-lg font-Prompt  '>
                             {`${tutor.firstname} ${tutor.lastname}`}
@@ -82,7 +83,7 @@ const Search = ({ tutors, tutorStat }) => {
 
 
     return (
-        <div className="flex min-h-screen flex-col items-center justify-begin py-2 bg-gray-900">
+        <div className=" transition-all flex min-h-screen flex-col items-center justify-begin py-2 bg-gray-900">
             <Head>
                 <title>Find you tutor | Geacher</title>
                 <link rel="icon" href="/icon.jpg" />

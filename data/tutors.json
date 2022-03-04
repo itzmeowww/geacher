@@ -12,15 +12,39 @@
     "fb": "http://facebook.com/thanasan.kumdee/"
   },
   {
-    "firstname": "DEFFF",
-    "lastname": "LONGEEEEENAMEEEE",
+    "firstname": "Chindanai",
+    "lastname": "Trakantannarong",
     "batch": 5,
-    "poster": "",
-    "id": "5m223",
-    "subjects": ["Biology", "Mathematics", "Chemistry"],
-    "tel": "0845490929",
-    "ig": "https://instagram.com/",
-    "line": "",
-    "fb": "http://facebook.com//"
+    "poster": "https://github.com/itzmeowww/geacher/blob/main/public/posters/5m301.jpg",
+    "id": "5m301",
+    "subjects": ["Physics"],
+    "tel": "0961638725",
+    "ig": "https://instagram.com/golfchindanai",
+    "line": "0961638725",
+    "fb": "https://www.facebook.com/chindanai.trakan"
+  },
+  {
+    "firstname": "Natthakan",
+    "lastname": "Saeng-nil",
+    "batch": 5,
+    "poster": "https://github.com/itzmeowww/geacher/blob/main/public/posters/5m306.jpeg",
+    "id": "5m306",
+    "subjects": ["Physics", "Mathematics"],
+    "tel": "0899692513",
+    "ig": "https://instagram.com/kowpunnuttagun",
+    "line": "kaolizaza",
+    "fb": "https://www.facebook.com/profile.php?id=100008177912027"
+  },
+  {
+    "firstname": "Thanyawit",
+    "lastname": "Plukmontol",
+    "batch": 5,
+    "poster": "https://github.com/itzmeowww/geacher/blob/main/public/posters/5m314.jpg",
+    "id": "5m314",
+    "subjects": ["Mathematics", "English"],
+    "tel": "0626852188",
+    "ig": "https://instagram.com/thanyawitp",
+    "line": "pleumthanyawit",
+    "fb": "https://www.facebook.com/thanyawit.plukmontol.3"
   }
 ]
