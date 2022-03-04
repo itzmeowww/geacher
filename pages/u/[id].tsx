@@ -54,9 +54,12 @@ const TutorPage = () => {
                         {tutor === undefined ? <div className='animate-pulse w-36 h-6 bg-slate-700 rounded' /> : `${tutor.firstname} ${tutor.lastname} #${tutor.batch}`}
                     </h1>
                 </div>
+
                 <div className='w-full border-t border-4 border-pink-500 -mt-3 '></div>
 
-
+                <div className='w-60 h-60 '>
+                    {tutor === undefined ? <div className='w-full h-full bg-slate-300 animate-pulse' ></div> : <img src={tutor.poster} alt="" width="240" />}
+                </div>
             </main >
 
             <section className='-mt-20 max-w-4xl flex w-full flex-col pb-20 items-start justify-start px-10 sm:px-20 text-center'>
