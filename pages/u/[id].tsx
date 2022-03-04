@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+// import { useRouter } from 'next/router'
+import { useState } from 'react'
 
 
 
@@ -20,27 +20,27 @@ type Tutor = {
 }
 
 
-const TutorPage = () => {
+const TutorPage = ({ tutor }) => {
 
-    const [tutor, setTutor] = useState<Tutor>()
-    const router = useRouter()
+    // const [tutor, setTutor] = useState<Tutor>()
+    // const router = useRouter()
 
-    const { id } = router.query
+    // const { id } = router.query
 
     const path = 'https://geacher.vercel.app' + router.asPath
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        if (id === undefined) return
+    //     if (id === undefined) return
 
-        const url = "https://geacher.vercel.app/api/getTutor/" + id
-        fetch(url).then((res) => {
-            res.json().then((data) => {
-                setTutor(data)
+    //     const url = "https://geacher.vercel.app/api/getTutor/" + id
+    //     fetch(url).then((res) => {
+    //         res.json().then((data) => {
+    //             setTutor(data)
 
-            })
-        })
-    }, [id])
+    //         })
+    //     })
+    // }, [id])
     const [isCopied, setIsCopied] = useState(false);
 
     // This is the function we wrote earlier
@@ -142,6 +142,26 @@ const TutorPage = () => {
     )
 }
 
+export async function getStaticProps({ params }) {
+    // Fetch data from external API
 
+    const res = await fetch(`https://geacher.vercel.app/api/getTutor/${params.id}`)
+    const tutor = await res.json()
+
+    return { props: { tutor } }
+}
+
+export async function getStaticPaths() {
+    const res = await fetch(`https://geacher.vercel.app/api/getTutors`)
+    const tutors = await res.json()
+    let paths = []
+    tutors.forEach((tutor) => {
+        paths.push({ params: { id: tutor.id } })
+    })
+    return {
+        paths,
+        fallback: false
+    }
+}
 
 export default TutorPage
