@@ -16,7 +16,7 @@ export default function handler(
     tutor.subjects.forEach((subject) => {
       cou.set(
         subject,
-        cou.get(subject) === undefined ? 0 : cou.get(subject) + 1
+        cou.get(subject) === undefined ? 1 : cou.get(subject) + 1
       )
     })
   })
