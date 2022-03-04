@@ -61,11 +61,11 @@ const Search = ({ tutors, tutorStat }) => {
                             <div className='w-60 h-60 bg-slate-300 animate-pulse absolute
                             '></div>
                         </div>
-                        <div className='text-lg font-Prompt  '>
+                        <div className='text-lg font-Prompt mt-2'>
                             {`${tutor.firstname} ${tutor.lastname}`}
                         </div>
                         <a href={`u/${tutor.id}`}>
-                            <button className='font-Prompt bg-blue-600 px-4 py-1 rounded text-white'>
+                            <button className='font-Prompt bg-blue-600 px-4 py-1 my-2 rounded text-white'>
                                 เพิ่มเติม
                             </button>
                         </a>
@@ -91,13 +91,13 @@ const Search = ({ tutors, tutorStat }) => {
                 <link rel="icon" href="/icon.jpg" />
             </Head>
 
-            <main className=" text-white font-Prompt max-w-4xl  flex w-full flex-col items-center justify-start  px-20 text-left">
-                <h1 className='text-xl my-8'>
-                    ค้นหาติวเตอร์ของคุณ
+            <main className=" text-white font-Prompt max-w-4xl  flex w-full flex-col items-center justify-start px-10  md:px-20 text-left">
+                <h1 className='text-2xl my-8 text-pink-500'>
+                    ค้นหาติวเตอรสำหรับคุณ
                 </h1>
                 <div className='grid grid-cols-3 gap-4'>
-                    <div>
-                        <h1 className='text-lg col-span-1'>
+                    <div className='col-span-1 flex flex-col justify-center items-center border-r-2'>
+                        <h1 className='text-lg '>
                             วิชา
                         </h1>
                     </div>

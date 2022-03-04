@@ -22,10 +22,23 @@ type Tutor = {
 
 const TutorPage = () => {
 
-    const [tutor, setTutor] = useState<Tutor>()
+    const [tutor, setTutor] = useState<Tutor>({
+        "firstname": "Chindanai",
+        "lastname": "Trakantannarong",
+        "batch": 5,
+        "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m301.jpg",
+        "id": "5m301",
+        "subjects": ["Physics"],
+        "tel": "0961638725",
+        "ig": "https://instagram.com/golfchindanai",
+        "line": "0961638725",
+        "fb": "https://www.facebook.com/chindanai.trakan"
+    })
     const router = useRouter()
 
     const { id } = router.query
+
+    const path = 'https://geacher.vercel.app' + router.asPath
 
     useEffect(() => {
 
@@ -39,13 +52,47 @@ const TutorPage = () => {
             })
         })
     }, [id])
+    const [isCopied, setIsCopied] = useState(false);
 
+    // This is the function we wrote earlier
+    async function copyTextToClipboard(text) {
+        if ('clipboard' in navigator) {
+            return await navigator.clipboard.writeText(text);
+        } else {
+            return document.execCommand('copy', true, text);
+        }
+    }
+
+    const handleCopyClick = () => {
+        // Asynchronously call copyTextToClipboard
+        copyTextToClipboard(path)
+            .then(() => {
+                // If successful, update the isCopied state value
+                setIsCopied(true);
+                setTimeout(() => {
+                    setIsCopied(false);
+                }, 1500);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
 
     return (
         <div className="flex w-screen overflow-hidden min-h-screen flex-col items-center justify-center bg-gray-900">
             <Head>
-                <title>Geacher</title>
+                <title>{`${tutor.firstname} ${tutor.lastname} #${tutor.batch}`} | Geacher</title>
+
                 <link rel="icon" href="/icon.jpg" />
+                <meta property="og:url" content={path} />
+
+
+                <meta property="og:title" content={`${tutor.firstname} ${tutor.lastname} #${tutor.batch} | Geacher`} />
+                <meta property="og:image" content={`${tutor.poster}`} />
+
+                <meta property="twitter:card" content="summary" />
+
+
             </Head>
 
             <main className="max-w-4xl flex flex-1 w-full  flex-col items-start justify-start px-10 sm:px-20 pt-20  text-left overflow-hidden">
@@ -61,9 +108,10 @@ const TutorPage = () => {
 
                 <div className='w-full my-6 md:mt-20'>
                     <div className='w-72 md:w-96 h-72 md:h-96 mx-auto'>
-                        {tutor === undefined ? <div className='w-full h-full bg-slate-300 animate-pulse' ></div> : <Image src={tutor.poster} alt="" className='w-full' />}
+                        {tutor === undefined ? <div className='w-full h-full bg-slate-300 animate-pulse' ></div> : <image src={tutor.poster} alt="" className='w-full' />}
                     </div>
                 </div>
+                <button className='bg-white px-4 py-1 mx-auto font-Prompt rounded mb-6' onClick={handleCopyClick}>{isCopied ? 'คัดลอกแล้ว' : 'แชร์เลย'}</button>
             </main >
 
             <section className='max-w-4xl flex w-full flex-col pb-20 items-end justify-start px-10 sm:px-20 text-center'>
@@ -74,11 +122,15 @@ const TutorPage = () => {
                 </div>
                 <div className='w-full border-t border-4 border-blue-400 -mt-3 '></div>
 
-                <div className='w-full flex flex-col gap-4 items-start justify-middle mt-10'>
-                    {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''><button className='px-4 py-1 bg-white rounded text-lg'> <Image src="/phoneIcon.svg" alt="Phone Logo" height={16} /> : {tutor.tel}</button> </a> : <></>}
-                    {(tutor && tutor.ig) ? <a href={`https://instagram.com/${tutor.ig}`} className=''><button className='px-4 py-1 bg-white rounded text-lg'> <Image src="/igIcon.svg" alt="Instagram Logo" height={16} /> Instagram </button></a> : <></>}
-                    {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''><button className='px-4 py-1 bg-white rounded text-lg'><Image src="/fbIcon.svg" alt="Facebook Logo" height={16} />Facebook</button> </a> : <></>}
-                    {(tutor && tutor.line) ? <a className=''><button className='px-4 py-1 bg-white rounded text-lg'> <Image src="/lineIcon.svg" alt="Line Logo" height={16} /> {tutor.line} </button></a> : <></>}
+                <div className='w-full flex flex-col md:flex-row gap-4 items-start flex-wrap  md:items-center  justify-middle mt-10'>
+                    {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''>
+                        <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'> <Image src="/phoneIcon.svg" alt="Phone Logo" height={32} width={32} /> : {tutor.tel}</button> </a> : <></>}
+                    {(tutor && tutor.ig) ? <a href={`https://instagram.com/${tutor.ig}`} className=''>
+                        <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'> <Image src="/igIcon.svg" alt="Instagram Logo" height={28} width={28} /> Instagram </button></a> : <></>}
+                    {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''>
+                        <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'><Image src="/fbIcon.svg" alt="Facebook Logo" height={32} width={32} />Facebook</button> </a> : <></>}
+                    {(tutor && tutor.line) ? <a className=''>
+                        <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'> <Image src="/lineIcon.svg" alt="Line Logo" height={32} width={32} /> {tutor.line} </button></a> : <></>}
                 </div>
             </section>
             <footer className="text-white flex h-24 w-full items-center justify-center border-t">
