@@ -12,10 +12,10 @@ const Home = ({ tutorStat }) => {
         <link rel="icon" href="/icon.jpg" />
 
         <meta property="og:url" content="https://geacher.vercel.app" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview.png" />
 
         <meta property="og:title" content="Geacher | Tutors from kvis" />
-
-        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:card" content="summary_large_image" />
       </Head>
 
       <main className="max-w-4xl flex w-full flex-1 min-h-screen flex-col items-start justify-center px-10 sm:px-20  text-left overflow-hidden">
