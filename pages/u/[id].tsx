@@ -58,7 +58,7 @@ const TutorPage = () => {
 
 
                 <div className='w-full mt-10 md:mt-20'>
-                    <div className='w-64 md:w-96 h-64 md:h-96 mx-auto'>
+                    <div className='w-72 md:w-96 h-72 md:h-96 mx-auto'>
                         {tutor === undefined ? <div className='w-full h-full bg-slate-300 animate-pulse' ></div> : <img src={tutor.poster} alt="" className='w-full' />}
                     </div>
                 </div>
@@ -72,11 +72,11 @@ const TutorPage = () => {
                 </div>
                 <div className='w-full border-t border-4 border-blue-400 -mt-3 '></div>
 
-                <div className='flex flex-col gap-4 items-center align-middle'>
-                    {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''><button className='px-4 py-1 bg-white rounded text-xl'> TEL : {tutor.tel}</button> </a> : <></>}
-                    {(tutor && tutor.ig) ? <a href={`https://instagram.com/${tutor.ig}`} className=''><button className='px-4 py-1 bg-white rounded text-xl'>IG : {tutor.ig} </button></a> : <></>}
-                    {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''><button className='px-4 py-1 bg-white rounded text-xl'>FB : {tutor.fb}</button> </a> : <></>}
-                    {(tutor && tutor.line) ? <a className=''><button className='px-4 py-1 bg-white rounded text-xl'>LINE ID : {tutor.line} </button></a> : <></>}
+                <div className='flex flex-col gap-4 items-start justify-middle mt-10'>
+                    {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''><button className='px-4 py-1 bg-white rounded text-lg'> TEL : {tutor.tel}</button> </a> : <></>}
+                    {(tutor && tutor.ig) ? <a href={`https://instagram.com/${tutor.ig}`} className=''><button className='px-4 py-1 bg-white rounded text-lg'>IG : {tutor.ig} </button></a> : <></>}
+                    {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''><button className='px-4 py-1 bg-white rounded text-lg'>FB : {tutor.fb}</button> </a> : <></>}
+                    {(tutor && tutor.line) ? <a className=''><button className='px-4 py-1 bg-white rounded text-lg'>LINE ID : {tutor.line} </button></a> : <></>}
                 </div>
             </section>
             <footer className="text-white flex h-24 w-full items-center justify-center border-t">
