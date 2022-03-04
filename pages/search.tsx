@@ -87,8 +87,16 @@ const Search = ({ tutors, tutorStat }) => {
     return (
         <div className=" transition-all flex min-h-screen flex-col items-center justify-begin py-2 bg-gray-900">
             <Head>
-                <title>Find you tutor | Geacher</title>
+                <title>Find your tutor | Geacher</title>
                 <link rel="icon" href="/icon.jpg" />
+
+
+                <meta property="og:url" content="https://geacher.vercel.app/search" />
+
+                <meta property="og:title" content="Find your tutor| Tutors from kvis" />
+
+                <meta property="twitter:card" content="summary" />
+
             </Head>
 
             <main className=" text-white font-Prompt max-w-4xl  flex w-full flex-col items-center justify-start px-10  md:px-20 text-left">
@@ -139,7 +147,7 @@ const Search = ({ tutors, tutorStat }) => {
                     <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
                 </a>
             </footer>
-        </div>
+        </div >
     )
 }
 

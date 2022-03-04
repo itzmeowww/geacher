@@ -8,8 +8,14 @@ const Home = ({ tutorStat }) => {
   return (
     <div className="flex w-screen overflow-hidden min-h-screen flex-col items-center justify-center bg-gray-900">
       <Head>
-        <title>Geacher</title>
+        <title>Geacher | Tutors from kvis</title>
         <link rel="icon" href="/icon.jpg" />
+
+        <meta property="og:url" content="https://geacher.vercel.app" />
+
+        <meta property="og:title" content="Geacher | Tutors from kvis" />
+
+        <meta property="twitter:card" content="summary" />
       </Head>
 
       <main className="max-w-4xl flex w-full flex-1 min-h-screen flex-col items-start justify-center px-10 sm:px-20  text-left overflow-hidden">

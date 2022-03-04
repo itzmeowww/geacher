@@ -22,18 +22,7 @@ type Tutor = {
 
 const TutorPage = () => {
 
-    const [tutor, setTutor] = useState<Tutor>({
-        "firstname": "Chindanai",
-        "lastname": "Trakantannarong",
-        "batch": 5,
-        "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m301.jpg",
-        "id": "5m301",
-        "subjects": ["Physics"],
-        "tel": "0961638725",
-        "ig": "https://instagram.com/golfchindanai",
-        "line": "0961638725",
-        "fb": "https://www.facebook.com/chindanai.trakan"
-    })
+    const [tutor, setTutor] = useState<Tutor>()
     const router = useRouter()
 
     const { id } = router.query
@@ -122,7 +111,7 @@ const TutorPage = () => {
                 </div>
                 <div className='w-full border-t border-4 border-blue-400 -mt-3 '></div>
 
-                <div className='w-full flex flex-col md:flex-row gap-4 items-start flex-wrap  md:items-center  justify-middle mt-10'>
+                <div className='w-full flex flex-col md:flex-row gap-4 items-center flex-wrap justify-middle mt-10'>
                     {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''>
                         <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'> <Image src="/phoneIcon.svg" alt="Phone Logo" height={32} width={32} /> : {tutor.tel}</button> </a> : <></>}
                     {(tutor && tutor.ig) ? <a href={`https://instagram.com/${tutor.ig}`} className=''>
