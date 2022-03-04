@@ -26,6 +26,7 @@ const TutorPage = () => {
     useEffect(() => {
 
         fetch(`https://geacher.vercel.app/api/getTutor/` + id).then((res) => {
+            console.log(res)
             res.json().then((data) => {
                 setTutor(data)
             })
