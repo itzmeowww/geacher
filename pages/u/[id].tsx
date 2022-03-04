@@ -118,7 +118,7 @@ const TutorPage = () => {
 
                 <div className='w-full flex flex-col md:flex-row gap-4 items-center flex-wrap justify-middle mt-10'>
                     {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''>
-                        <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'> <Image src="/phoneIcon.svg" alt="Phone Logo" height={32} width={32} /> : {tutor.tel}</button> </a> : <></>}
+                        <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'> <Image src="/phoneIcon.svg" alt="Phone Logo" height={32} width={32} /> {tutor.tel}</button> </a> : <></>}
                     {(tutor && tutor.ig) ? <a href={`https://instagram.com/${tutor.ig}`} className=''>
                         <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'> <Image src="/igIcon.svg" alt="Instagram Logo" height={28} width={28} /> Instagram </button></a> : <></>}
                     {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''>

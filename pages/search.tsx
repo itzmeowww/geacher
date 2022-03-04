@@ -93,7 +93,7 @@ const Search = ({ tutors, tutorStat }) => {
 
                 <meta property="og:url" content="https://geacher.vercel.app/search" />
 
-                <meta property="og:title" content="Find your tutor| Tutors from kvis" />
+                <meta property="og:title" content="Find your tutor | Geacher" />
 
                 <meta property="twitter:card" content="summary" />
 
