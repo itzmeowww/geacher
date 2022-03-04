@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { Circle, Square } from "react-awesome-shapes"
 
 const Home = ({ tutorStat }) => {
 
@@ -15,11 +14,11 @@ const Home = ({ tutorStat }) => {
 
       <main className="max-w-4xl flex w-full flex-1 min-h-screen flex-col items-start justify-center px-10 sm:px-20  text-left overflow-hidden">
         <div className='-left-10 md:-left-6 lg:left-3 top-10 absolute'>
-          <Circle
+          {/* <Circle
             color="linear-gradient(135deg, #a5b4fc, #6366f1)"
             size={['150px', '150px', '180px', '180px']}
             zIndex={2}
-          />
+          /> */}
         </div>
 
 
@@ -41,11 +40,11 @@ const Home = ({ tutorStat }) => {
           </button>
         </a>
         <div className='absolute right-16 md:right-32 bottom-36'>
-          <Square
+          {/* <Square
             color="linear-gradient(135deg, #fdba74, #f97316)"
             size="50px"
             zIndex={2}
-          />
+          /> */}
         </div>
       </main>
 
