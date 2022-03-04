@@ -70,14 +70,19 @@ const TutorPage = () => {
     return (
         <div className="flex w-screen overflow-hidden min-h-screen flex-col items-center justify-center bg-gray-900">
             <Head>
-                <title>{`${tutor.firstname} ${tutor.lastname} #${tutor.batch}`} | Geacher</title>
+                {
+                    tutor === undefined ? <title>Geacher</title> : <title>{`${tutor.firstname} ${tutor.lastname} #${tutor.batch}`} | Geacher</title>
+                }
 
                 <link rel="icon" href="/icon.jpg" />
-                <meta property="og:url" content={path} />
+                {
+                    tutor === undefined ? <meta property="og:url" content="https://geacher.vercel.app" /> : <meta property="og:url" content={path} />
+                }
 
 
-                <meta property="og:title" content={`${tutor.firstname} ${tutor.lastname} #${tutor.batch} | Geacher`} />
-                <meta property="og:image" content={`${tutor.poster}`} />
+
+                {tutor === undefined ? <meta property="og:title" content={`Geacher`} /> : <meta property="og:title" content={`${tutor.firstname} ${tutor.lastname} #${tutor.batch} | Geacher`} />}
+                {tutor === undefined ? <></> : <meta property="og:image" content={`${tutor.poster}`} />}
 
                 <meta property="twitter:card" content="summary" />
 
