@@ -56,8 +56,10 @@ const Search = ({ tutors, tutorStat }) => {
 
                     <div className='flex flex-col items-center justify-center bg-white rounded-xl p-2'>
 
-                        <div className='w-60 h-60 bg-slate-400'>
-                            <img src={tutor.poster} alt="" width="240" />
+                        <div className='w-60 h-60 '>
+                            <img src={tutor.poster} alt="" width="240" className='z-10 absolute' />
+                            <div className='w-60 h-60 bg-slate-300 animate-pulse absolute
+                            '></div>
                         </div>
                         <div className='text-lg font-Prompt  '>
                             {`${tutor.firstname} ${tutor.lastname}`}
@@ -117,7 +119,7 @@ const Search = ({ tutors, tutorStat }) => {
 
             </main>
 
-            <section className='flex justify-center mt-12 mb-6'>
+            <section className='flex justify-center mt-12 mb-6 px-10 md:px-20 w-full'>
                 <div className='w-full flex justify-center'>
                     <div className='flex flex-row flex-wrap justify-center items-center gap-6'>
                         {

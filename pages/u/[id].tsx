@@ -51,19 +51,23 @@ const TutorPage = () => {
 
                 <div className='bg-gray-900 z-10 pr-4'>
                     <h1 className="text-4xl sm:text-6xl font-bold text-pink-500 ">
-                        {tutor === undefined ? <div className='animate-pulse w-36 h-6 bg-slate-700 rounded' /> : `${tutor.firstname} ${tutor.lastname} #${tutor.batch}`}
+                        {tutor === undefined ? <div className='animate-pulse w-36 h-6 sm:h-10 bg-slate-700 rounded' /> : `${tutor.firstname} ${tutor.lastname} #${tutor.batch}`}
                     </h1>
                 </div>
 
-                <div className='w-full border-t border-4 border-pink-500 -mt-3 '></div>
 
-                <div className='w-60 h-60 '>
-                    {tutor === undefined ? <div className='w-full h-full bg-slate-300 animate-pulse' ></div> : <img src={tutor.poster} alt="" width="240" />}
+                <div className='w-full mt-10 md:mt-20'>
+                    <div className='w-64 md:w-96 h-64 md:h-96 mx-auto'>
+                        {tutor === undefined ? <div className='w-full h-full bg-slate-300 animate-pulse' ></div> : <img src={tutor.poster} alt="" className='w-full' />}
+                    </div>
                 </div>
             </main >
 
-            <section className='-mt-20 max-w-4xl flex w-full flex-col pb-20 items-start justify-start px-10 sm:px-20 text-center'>
-
+            <section className='text-lg text-white max-w-4xl flex w-full flex-col pb-20 items-start justify-start px-10 sm:px-20 text-center'>
+                {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''>TEL : {tutor.tel} </a> : <></>}
+                {(tutor && tutor.ig) ? <a href={`https://instagram.com/${tutor.ig}`} className=''>IG : {tutor.ig} </a> : <></>}
+                {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''>FB : {tutor.fb} </a> : <></>}
+                {(tutor && tutor.line) ? <a className=''>LINE ID : {tutor.line} </a> : <></>}
             </section>
             <footer className="text-white flex h-24 w-full items-center justify-center border-t">
                 <a
