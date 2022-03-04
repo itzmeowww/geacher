@@ -20,7 +20,7 @@ type Tutor = {
 
 const TutorPage = () => {
 
-    const [tutor, setTutor] = useState()
+    const [tutor, setTutor] = useState<Tutor>()
     const router = useRouter()
     const { id } = router.query
     console.log(id)
@@ -29,7 +29,6 @@ const TutorPage = () => {
         fetch(`https://geacher.vercel.app/api/getTutor/` + id).then((res) => {
             res.json().then((data) => {
                 setTutor(data)
-                console.log(tutor)
             })
         })
 
