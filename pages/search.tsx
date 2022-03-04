@@ -102,7 +102,7 @@ const Search = ({ tutors, tutorStat }) => {
             <main className=" text-white font-Prompt max-w-4xl  flex w-full flex-col items-center justify-start px-10  md:px-20 text-left">
                 <a href="../" className='text-white text-md font-Prompt underline mb-4 mt-6'>{"ย้อนกลับ"}</a>
                 <h1 className='text-2xl md:text-3xl my-8 text-pink-500'>
-                    ค้นหาติวเตอรสำหรับคุณ
+                    ค้นหาติวเตอร์สำหรับคุณ
                 </h1>
                 <div className='grid grid-cols-3 gap-4'>
                     <div className='col-span-1 flex flex-col justify-center items-center border-r-2'>
