@@ -14,7 +14,10 @@ export default function handler(
   let cou = new Map()
   tutors.forEach((tutor) => {
     tutor.subjects.forEach((subject) => {
-      cou.set(subject, cou.get(subject) + 1)
+      cou.set(
+        subject,
+        cou.get(subject) === undefined ? 0 : cou.get(subject) + 1
+      )
     })
   })
 

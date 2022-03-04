@@ -20,9 +20,13 @@ type Tutor = {
     fb?: string
 }
 
-const Search = ({ tutors }) => {
+const Search = ({ tutors, tutorStat }) => {
 
-    const subjectList = ['ฟิสิกส์', 'คณิตศาสตร์']
+    const subjectList = []
+
+    tutorStat.forEach((data) => {
+        subjectList.push(data.name)
+    })
 
     const [subjectCheck, setSubjectCheck] = useState(new Map())
 
@@ -57,9 +61,9 @@ const Search = ({ tutors }) => {
                         <div className='text-lg font-Prompt  '>
                             {`${tutor.firstname} ${tutor.lastname}`}
                         </div>
-                        <a href="tutor/">
+                        <a href={`u/${tutor.id}`}>
                             <button className='font-Prompt bg-blue-600 px-4 py-1 rounded text-white'>
-                                ติดต่อ
+                                เพิ่มเติม
                             </button>
                         </a>
                     </div>
@@ -139,12 +143,15 @@ const Search = ({ tutors }) => {
 export async function getServerSideProps() {
     // Fetch data from external API
 
-    const res = await fetch(`https://geacher.vercel.app/api/getTutor`)
+    const res = await fetch(`https://geacher.vercel.app/api/getTutors`)
     const tutors = await res.json()
 
-    console.log(tutors)
+    const res2 = await fetch(`https://geacher.vercel.app/api/getTutorStat`)
+    const tutorStat = await res2.json()
 
-    return { props: { tutors } }
+
+
+    return { props: { tutors, tutorStat } }
 }
 
 

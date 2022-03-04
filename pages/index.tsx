@@ -100,6 +100,7 @@ export async function getServerSideProps() {
 
   const res = await fetch(`https://geacher.vercel.app/api/getTutorStat`)
   const tutorStat = await res.json()
+
   return { props: { tutorStat } }
 }
 
