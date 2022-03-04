@@ -46,7 +46,7 @@ const TutorPage = () => {
                 <link rel="icon" href="/icon.jpg" />
             </Head>
 
-            <main className="max-w-4xl flex w-full  min-h-screen flex-col items-start justify-start px-10 sm:px-20 pt-20  text-left overflow-hidden">
+            <main className="max-w-4xl flex flex-1 w-full  flex-col items-start justify-start px-10 sm:px-20 pt-20  text-left overflow-hidden">
 
 
                 <div className='bg-gray-900 z-10 pr-4'>
@@ -54,6 +54,7 @@ const TutorPage = () => {
                         {tutor === undefined ? <div className='animate-pulse w-36 h-6 sm:h-10 bg-slate-700 rounded' /> : `${tutor.firstname} ${tutor.lastname} #${tutor.batch}`}
                     </h1>
                 </div>
+                <div className='w-full border-t border-4 border-pink-500 mt-3'></div>
 
 
                 <div className='w-full mt-10 md:mt-20'>
@@ -63,11 +64,20 @@ const TutorPage = () => {
                 </div>
             </main >
 
-            <section className='text-lg text-white max-w-4xl flex w-full flex-col pb-20 items-start justify-start px-10 sm:px-20 text-center'>
-                {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''>TEL : {tutor.tel} </a> : <></>}
-                {(tutor && tutor.ig) ? <a href={`https://instagram.com/${tutor.ig}`} className=''>IG : {tutor.ig} </a> : <></>}
-                {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''>FB : {tutor.fb} </a> : <></>}
-                {(tutor && tutor.line) ? <a className=''>LINE ID : {tutor.line} </a> : <></>}
+            <section className='max-w-4xl flex w-full flex-col pb-20 items-end justify-start px-10 sm:px-20 text-center'>
+                <div className='bg-gray-900 z-10 pl-4'>
+                    <h1 className="text-4xl sm:text-6xl font-bold text-blue-400 mr-0">
+                        CONTACTS
+                    </h1>
+                </div>
+                <div className='w-full border-t border-4 border-blue-400 -mt-3 '></div>
+
+                <div className='flex flex-col gap-4 items-center align-middle'>
+                    {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''><button className='px-4 py-1 bg-white rounded text-xl'> TEL : {tutor.tel}</button> </a> : <></>}
+                    {(tutor && tutor.ig) ? <a href={`https://instagram.com/${tutor.ig}`} className=''><button className='px-4 py-1 bg-white rounded text-xl'>IG : {tutor.ig} </button></a> : <></>}
+                    {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''><button className='px-4 py-1 bg-white rounded text-xl'>FB : {tutor.fb}</button> </a> : <></>}
+                    {(tutor && tutor.line) ? <a className=''><button className='px-4 py-1 bg-white rounded text-xl'>LINE ID : {tutor.line} </button></a> : <></>}
+                </div>
             </section>
             <footer className="text-white flex h-24 w-full items-center justify-center border-t">
                 <a
