@@ -91,7 +91,7 @@ const TutorPage = () => {
 
             <main className="max-w-4xl flex flex-1 w-full  flex-col items-start justify-start px-10 sm:px-20 pt-20  text-left overflow-hidden">
 
-
+                <a href="../" className='text-white text-md font-Prompt underline mb-4'>{"ย้อนกลับ"}</a>
                 <div className='bg-gray-900 z-10 pr-4'>
                     <h1 className="text-4xl sm:text-6xl font-bold text-pink-500 ">
                         {tutor === undefined ? <div className='animate-pulse w-36 h-6 sm:h-10 bg-slate-700 rounded' /> : `${tutor.firstname} ${tutor.lastname} #${tutor.batch}`}
