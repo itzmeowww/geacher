@@ -2,73 +2,90 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-const Home: NextPage = () => {
+import { Circle, Square } from "react-awesome-shapes"
+
+const Home = ({ tutorStat }) => {
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="flex w-screen overflow-hidden min-h-screen flex-col items-center justify-center bg-gray-900">
       <Head>
-        <title>Create Next App</title>
+        <title>Geacher</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
+      <main className="max-w-4xl flex w-full flex-1 min-h-screen flex-col items-start justify-center px-10 sm:px-20  text-left overflow-hidden">
+        <div className='-left-10 md:-left-6 lg:left-3 top-10 absolute'>
+          <Circle
+            color="linear-gradient(135deg, #a5b4fc, #6366f1)"
+            size={['150px', '150px', '180px', '180px']}
+            zIndex={2}
+          />
+        </div>
+
+
+        <div className='bg-gray-900 z-10 pr-4'>
+          <h1 className="text-4xl sm:text-6xl font-bold text-pink-500 ">
+            GEACHER
+          </h1>
+        </div>
+        <div className='w-full border-t border-4 border-pink-500 -mt-3 '></div>
+
+        <h1 className='font-Prompt text-lg sm:text-3xl text-left text-rose-300 mt-4'>
+          แหล่งรวมติวเตอร์คุณภาพเยี่ยม
+          <br />
+          การันตีด้วยดีกรีเด็ก KVIS
         </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <a href="/search" className='mx-auto mt-12'>
+          <button className='text-xl font-Prompt bg-white hover:bg-slate-200  active:bg-gray-400 px-12 py-1 rounded '>
+            ค้นหาเลย
+          </button>
+        </a>
+        <div className='absolute right-16 md:right-32 bottom-36'>
+          <Square
+            color="linear-gradient(135deg, #fdba74, #f97316)"
+            size="50px"
+            zIndex={2}
+          />
         </div>
       </main>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
+      <section className='-mt-20 max-w-4xl flex w-full flex-col pb-20 items-start justify-start px-10 sm:px-20 text-center'>
+        <div className='w-full flex flex-col items-end '>
+          <div className='bg-gray-900 z-10 pl-4'>
+            <h1 className="text-4xl sm:text-6xl font-bold text-blue-400 mr-0">
+              SUBJECTS
+            </h1>
+          </div>
+          <div className='w-full border-t border-4 border-blue-400 -mt-3 '></div>
+        </div>
+
+        <div className='text-white font-Prompt mx-auto mt-6 mb-8 text-xl'>
+          พวกเรามีติวเตอร์
+        </div>
+        <div className='w-full flex justify-center'>
+          <div className='flex flex-row flex-wrap justify-center items-center gap-6'>
+
+            {
+              tutorStat.map((subject) => {
+                return (
+                  <a href={`/search?sub=${subject.name}`}>
+                    <div className='flex flex-col items-center justify-center font-Prompt w-32 bg-white h-32 rounded-xl'>
+                      <div className='text-xl'>
+                        {subject.name}
+                      </div>
+                      <div className='text-3xl'>
+                        {subject.tutors} คน
+                      </div>
+
+                    </div>
+                  </a>)
+              })
+            }
+          </div>
+        </div>
+
+      </section>
+      <footer className="text-white flex h-24 w-full items-center justify-center border-t">
         <a
           className="flex items-center justify-center gap-2"
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -82,5 +99,24 @@ const Home: NextPage = () => {
     </div>
   )
 }
+
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+
+  // const res = await fetch(``)
+  // const tutorStat = await res.json()
+
+  let temp = [
+    { name: 'คณิตศาสตร์', tutors: 12 },
+    { name: 'ฟิสิกส์', tutors: 32 },
+    { name: 'เคมี', tutors: 1 },
+    { name: 'ชีวะ', tutors: 4 },
+    { name: 'ภาษาอังกฤษ', tutors: 3 },
+  ].sort((a, b) => { return b.tutors - a.tutors })
+  // Pass data to the page via props
+  return { props: { tutorStat: temp } }
+}
+
 
 export default Home
