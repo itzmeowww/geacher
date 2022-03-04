@@ -108,7 +108,7 @@ const TutorPage = () => {
 
                 <div className='w-full my-6 md:mt-20'>
                     <div className='w-72 md:w-96 h-72 md:h-96 mx-auto'>
-                        {tutor === undefined ? <div className='w-full h-full bg-slate-300 animate-pulse' ></div> : <image src={tutor.poster} alt="" className='w-full' />}
+                        {tutor === undefined ? <div className='w-full h-full bg-slate-300 animate-pulse' ></div> : <img src={tutor.poster} alt="" className='w-full' />}
                     </div>
                 </div>
                 <button className='bg-white px-4 py-1 mx-auto font-Prompt rounded mb-6' onClick={handleCopyClick}>{isCopied ? 'คัดลอกแล้ว' : 'แชร์เลย'}</button>
