@@ -84,7 +84,7 @@ const TutorPage = ({ tutor }) => {
                 {tutor === undefined ? <meta property="og:title" content={`Geacher`} /> : <meta property="og:title" content={`${tutor.firstname} ${tutor.lastname} #${tutor.batch} | Geacher`} />}
                 {tutor === undefined ? <></> : <meta property="og:image" content={`${tutor.poster}`} />}
 
-                <meta property="twitter:card" content="summary" />
+                <meta property="twitter:card" content="summary_large_image" />
 
 
             </Head>
