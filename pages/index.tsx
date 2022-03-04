@@ -9,16 +9,13 @@ const Home = ({ tutorStat }) => {
     <div className="flex w-screen overflow-hidden min-h-screen flex-col items-center justify-center bg-gray-900">
       <Head>
         <title>Geacher</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.jpg" />
       </Head>
 
       <main className="max-w-4xl flex w-full flex-1 min-h-screen flex-col items-start justify-center px-10 sm:px-20  text-left overflow-hidden">
         <div className='-left-10 md:-left-6 lg:left-3 top-10 absolute'>
-          {/* <Circle
-            color="linear-gradient(135deg, #a5b4fc, #6366f1)"
-            size={['150px', '150px', '180px', '180px']}
-            zIndex={2}
-          /> */}
+          <div className='z-10 absolute w-36 h-36 rounded-full' style={{ backgroundImage: "linear-gradient(135deg, #a5b4fc, #6366f1)" }}>
+          </div>
         </div>
 
 
@@ -40,13 +37,11 @@ const Home = ({ tutorStat }) => {
           </button>
         </a>
         <div className='absolute right-16 md:right-32 bottom-36'>
-          {/* <Square
-            color="linear-gradient(135deg, #fdba74, #f97316)"
-            size="50px"
-            zIndex={2}
-          /> */}
+          <div className='z-10 absolute w-12 h-12 ' style={{ backgroundImage: "linear-gradient(135deg, #fdba74, #f97316)" }}>
+          </div>
+
         </div>
-      </main>
+      </main >
 
       <section className='-mt-20 max-w-4xl flex w-full flex-col pb-20 items-start justify-start px-10 sm:px-20 text-center'>
         <div className='w-full flex flex-col items-end '>
@@ -95,7 +90,7 @@ const Home = ({ tutorStat }) => {
           <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </a>
       </footer>
-    </div>
+    </div >
   )
 }
 
@@ -103,18 +98,9 @@ const Home = ({ tutorStat }) => {
 export async function getServerSideProps() {
   // Fetch data from external API
 
-  // const res = await fetch(``)
-  // const tutorStat = await res.json()
-
-  let temp = [
-    { name: 'คณิตศาสตร์', tutors: 12 },
-    { name: 'ฟิสิกส์', tutors: 32 },
-    { name: 'เคมี', tutors: 1 },
-    { name: 'ชีวะ', tutors: 4 },
-    { name: 'ภาษาอังกฤษ', tutors: 3 },
-  ].sort((a, b) => { return b.tutors - a.tutors })
-  // Pass data to the page via props
-  return { props: { tutorStat: temp } }
+  const res = await fetch(`https://geacher.vercel.app/api/getTutorStat`)
+  const tutorStat = await res.json()
+  return { props: { tutorStat } }
 }
 
 

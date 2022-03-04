@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-
+import tutors from '../../data/tutors.json'
 type Stat = {
   name: string
   tutors: number
@@ -10,12 +10,20 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Stat[]>
 ) {
-  let tutorStat: Stat[] = [
-    { name: 'คณิตศาสตร์', tutors: 12 },
-    { name: 'ฟิสิกส์', tutors: 32 },
-    { name: 'เคมี', tutors: 1 },
-    { name: 'ชีวะ', tutors: 4 },
-    { name: 'ภาษาอังกฤษ', tutors: 3 },
-  ]
+  let tutorStat: Stat[] = []
+  let cou = new Map()
+  tutors.forEach((tutor) => {
+    tutor.subjects.forEach((subject) => {
+      cou.set(subject, cou.get(subject) + 1)
+    })
+  })
+
+  const keys = Array.from(cou.keys())
+  const values = Array.from(cou.values())
+
+  for (let i = 0; i < keys.length; i++) {
+    tutorStat.push({ name: keys[i], tutors: values[i] })
+  }
+
   res.status(200).json(tutorStat)
 }

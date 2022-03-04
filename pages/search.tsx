@@ -10,8 +10,14 @@ import Checkbox from '../components/Checkbox'
 type Tutor = {
     firstname: string
     lastname: string
-    nickname: string
     subjects: string[]
+    batch: number
+    poster: string
+    id: string
+    tel?: string
+    ig?: string
+    line?: string
+    fb?: string
 }
 
 const Search = ({ tutors }) => {
@@ -75,7 +81,7 @@ const Search = ({ tutors }) => {
         <div className="flex min-h-screen flex-col items-center justify-begin py-2 bg-gray-900">
             <Head>
                 <title>Find you tutor | Geacher</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/icon.jpg" />
             </Head>
 
             <main className=" text-white font-Prompt max-w-4xl  flex w-full flex-col items-center justify-start  px-20 text-left">
@@ -133,12 +139,12 @@ const Search = ({ tutors }) => {
 export async function getServerSideProps() {
     // Fetch data from external API
 
-    // const res = await fetch(``)
-    // const tutors = await res.json()
+    const res = await fetch(`https://geacher.vercel.app/api/getTutor`)
+    const tutors = await res.json()
 
-    let temp = [{ firstname: 'Nattapol', lastname: 'Chanpaisit', nickname: 'Nat', subjects: ['ฟิสิกส์'] },]
-    // Pass data to the page via props
-    return { props: { tutors: temp } }
+    console.log(tutors)
+
+    return { props: { tutors } }
 }
 
 
