@@ -43,7 +43,7 @@ const TutorPage = () => {
 
             <main className="max-w-4xl flex w-full flex-1 min-h-screen flex-col items-start justify-center px-10 sm:px-20  text-left overflow-hidden">
                 <h1>
-                    {tutor.firstname}
+                    {tutor === undefined ? '' : tutor.firstname}
                 </h1>
             </main >
 
