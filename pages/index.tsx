@@ -50,11 +50,10 @@ const Home = ({ tutorStat }: Props) => {
         <div className='absolute right-16 md:right-32 bottom-40'>
           <div className='z-10 absolute w-12 h-12 animate-v-move' style={{ backgroundImage: "linear-gradient(135deg, #fdba74, #f97316)" }}>
           </div>
-
         </div>
       </main >
 
-      <section className='-mt-20 max-w-4xl flex w-full flex-col pb-20 items-start justify-start px-10 sm:px-20 text-center'>
+      <section className='relative -mt-20 max-w-4xl flex w-full flex-col pb-20 items-start justify-start px-10 sm:px-20 text-center'>
         <div className='w-full flex flex-col items-end '>
           <div className='bg-gray-900 z-10 pl-4'>
             <h1 className="text-4xl sm:text-6xl font-bold mr-0 text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-500">
@@ -73,14 +72,17 @@ const Home = ({ tutorStat }: Props) => {
             {
               tutorStat.map((subject) => {
                 return (
-                  <StatCard name={subject.name} tutors={subject.tutors} />
+                  <StatCard key={`${subject}-stat`} name={subject.name} tutors={subject.tutors} />
                 );
               }
               )
             }
           </div>
         </div>
-
+        <div className='absolute -left-8 md:left-8 bottom-48'>
+          <div className='rotate-45 z-10 absolute w-16 h-16 animate-h-move' style={{ backgroundImage: "linear-gradient(135deg, #fde047, #eab308)" }}>
+          </div>
+        </div>
       </section>
       <footer className="text-white flex h-24 w-full items-center justify-center border-t">
         <a

@@ -69,7 +69,7 @@ const Search = ({ tutors, tutorStats }: Props) => {
             })
             if (match || allUncheck)
                 return (
-                    <TutorCard firstname={tutor.firstname} lastname={tutor.lastname} poster={tutor.poster} id={tutor.id} />
+                    <TutorCard key={`${tutor.firstname}-${tutor.lastname}`} firstname={tutor.firstname} lastname={tutor.lastname} poster={tutor.poster} id={tutor.id} />
                 )
 
         })

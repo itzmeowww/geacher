@@ -101,11 +101,11 @@ const TutorPage = ({ tutor }: Props) => {
                         }
                     </div>
                 </div>
-                <div className='flex justify-center items-center mx-auto mb-6 gap-4 text-blue-600'>
+                <div className='flex  flex-wrap justify-center items-center mx-auto mb-6 gap-2 text-blue-600'>
                     {tutor === undefined ?
                         <></> :
                         tutor.subjects.map((subject: string) => {
-                            return <a href={`../search/?sub=${subject}`}>
+                            return <a href={`../search/?sub=${subject}`} key={`tag-${subject}`}>
                                 <button className='bg-white rounded px-2 py-1 text-xs font-Prompt'>
                                     {`#${toThai.get(subject) === undefined ? subject : toThai.get(subject)}`}
                                 </button>
