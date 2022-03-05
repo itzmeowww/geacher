@@ -5,8 +5,6 @@
 
 # Logic
 
-1.  Tutors fill their info through google form
-
 # Todo
 
 - api

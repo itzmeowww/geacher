@@ -3,8 +3,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import StatCard from '../components/StatCard'
 
-
-const Home = ({ tutorStat }) => {
+import { TutorStat } from '../models/tutorStat'
+type Props = {
+  tutorStat: TutorStat[]
+}
+const Home = ({ tutorStat }: Props) => {
 
   return (
     <div className="flex w-screen overflow-hidden min-h-screen flex-col items-center justify-center bg-gray-900">

@@ -18,7 +18,7 @@ const TutorCard = ({ firstname, lastname, id, poster }: TutorCardType) => {
 
             <div className='w-60 h-60'>
                 {loading ? <div className='w-60 h-60 bg-slate-300 animate-pulse absolute'></div> : <></>}
-                <img src={poster} alt="" width="240" className='' onLoad={() => {
+                <img src={poster} alt="" width="240" className='z-10 absolute' onLoad={() => {
                     setLoading(false)
                 }} />
 

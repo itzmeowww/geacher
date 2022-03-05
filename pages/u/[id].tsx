@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -6,21 +6,13 @@ import { useState } from 'react'
 
 
 
-type Tutor = {
-    firstname: string
-    lastname: string
-    subjects: string[]
-    batch: number
-    poster: string
-    id: string
-    tel?: string
-    ig?: string
-    line?: string
-    fb?: string
+import { Tutor } from '../../models/tutor'
+
+type Props = {
+    tutor: Tutor
 }
 
-
-const TutorPage = ({ tutor }) => {
+const TutorPage = ({ tutor }: Props) => {
 
     // const [tutor, setTutor] = useState<Tutor>()
     const router = useRouter()
@@ -31,7 +23,7 @@ const TutorPage = ({ tutor }) => {
     const [isCopied, setIsCopied] = useState(false);
 
     // This is the function we wrote earlier
-    async function copyTextToClipboard(text) {
+    async function copyTextToClipboard(text: string) {
         if ('clipboard' in navigator) {
             return await navigator.clipboard.writeText(text);
         } else {
@@ -132,21 +124,25 @@ const TutorPage = ({ tutor }) => {
     )
 }
 
-export async function getStaticProps({ params }) {
-    // Fetch data from external API
 
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+    // Fetch data from external API
+    if (params === undefined) {
+        params = {
+            id: "0m000"
+        }
+    }
     const res = await fetch(`https://geacher.vercel.app/api/getTutor/${params.id}`)
-    const tutor = await res.json()
+    const tutor: Tutor = await res.json()
 
     return { props: { tutor } }
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
     const res = await fetch(`https://geacher.vercel.app/api/getTutors`)
-    const tutors = await res.json()
-    let paths = []
-    tutors.forEach((tutor) => {
-        paths.push({ params: { id: tutor.id } })
+    const tutors: Tutor[] = await res.json()
+    const paths = tutors.map((tutor) => {
+        return ({ params: { id: tutor.id } })
     })
     return {
         paths,

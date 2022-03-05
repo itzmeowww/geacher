@@ -8,30 +8,24 @@ import { useRouter } from 'next/router'
 import Checkbox from '../components/Checkbox'
 import TutorCard from '../components/TutorCard'
 
-type Tutor = {
-    firstname: string
-    lastname: string
-    subjects: string[]
-    batch: number
-    poster: string
-    id: string
-    tel?: string
-    ig?: string
-    line?: string
-    fb?: string
+import { Tutor } from '../models/tutor'
+import { TutorStat } from '../models/tutorStat'
+
+type Props = {
+    tutors: Tutor[]
+    tutorStats: TutorStat[]
 }
+const Search = ({ tutors, tutorStats }: Props) => {
 
-const Search = ({ tutors, tutorStat }) => {
+    const subjectList: string[] = []
 
-    const subjectList = []
-
-    tutorStat.forEach((data) => {
+    tutorStats.forEach((data) => {
         subjectList.push(data.name)
     })
 
     const [subjectCheck, setSubjectCheck] = useState(new Map())
 
-    const [matchedTutor, setMatchedTutor] = useState()
+    const [matchedTutor, setMatchedTutor] = useState<JSX.Element[]>()
 
     const [reload, setReload] = useState(false)
 
@@ -43,6 +37,11 @@ const Search = ({ tutors, tutorStat }) => {
         setSubjectCheck(newSubjectCheck)
     }, [])
 
+
+    const matchedTutors = () => {
+
+    }
+
     useEffect(() => {
 
         let allUncheck = true
@@ -53,9 +52,8 @@ const Search = ({ tutors, tutorStat }) => {
             }
         })
 
-        const newMatchedTutor = tutors.map((tutor: Tutor) => {
+        const newMatchedTutor: JSX.Element[] = tutors.map((tutor: Tutor) => {
             let match = true
-
             subjectList.forEach((subjectName) => {
                 if (subjectCheck.get(subjectName)) {
                     console.log(tutor.subjects)
@@ -64,13 +62,13 @@ const Search = ({ tutors, tutorStat }) => {
                     }
                 }
             })
-
-
             if (match || allUncheck)
                 return (
                     <TutorCard firstname={tutor.firstname} lastname={tutor.lastname} poster={tutor.poster} id={tutor.id} />
                 )
+
         })
+
         setMatchedTutor(newMatchedTutor)
         return () => {
 
@@ -163,11 +161,11 @@ export async function getServerSideProps() {
     const tutors = await res.json()
 
     const res2 = await fetch(`https://geacher.vercel.app/api/getTutorStat`)
-    const tutorStat = await res2.json()
+    const tutorStats = await res2.json()
 
 
 
-    return { props: { tutors, tutorStat } }
+    return { props: { tutors, tutorStats } }
 }
 
 
