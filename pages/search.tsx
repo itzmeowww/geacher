@@ -51,13 +51,20 @@ const Search = ({ tutors, tutorStats }: Props) => {
         })
 
         const newMatchedTutor: JSX.Element[] = tutors.map((tutor: Tutor) => {
-            let match = true
-            subjectList.forEach((subjectName) => {
-                if (subjectCheck.get(subjectName)) {
-                    console.log(tutor.subjects)
-                    if (tutor.subjects.lastIndexOf(subjectName) === -1) {
-                        match = false
-                    }
+            // let match = true
+            // subjectList.forEach((subjectName) => {
+            //     if (subjectCheck.get(subjectName)) {
+
+            //         if (tutor.subjects.lastIndexOf(subjectName) === -1) {
+            //             match = false
+            //         }
+            //     }
+            // })
+
+            let match = false
+            tutor.subjects.forEach((subject: string) => {
+                if (subjectCheck.get(subject)) {
+                    match = true
                 }
             })
             if (match || allUncheck)
@@ -89,6 +96,7 @@ const Search = ({ tutors, tutorStats }: Props) => {
                 <meta property="og:url" content="https://geacher.vercel.app/search" />
 
                 <meta property="og:title" content="Find your tutor | Geacher" />
+                <meta property="og:description" content="ค้นหาติวเตอร์ของคุณด้วย Geacher" />
 
                 <meta property="twitter:card" content="summary" />
 
@@ -101,7 +109,7 @@ const Search = ({ tutors, tutorStats }: Props) => {
                 </div>
 
                 <a href="../" className='text-white text-md font-Prompt underline mb-4 mt-6'>{"ย้อนกลับ"}</a>
-                <h1 className='z-20 text-2xl md:text-3xl my-8 text-pink-500'>
+                <h1 className='z-20 text-2xl md:text-3xl my-8 text-pink-400'>
                     ค้นหาติวเตอร์สำหรับคุณ
                 </h1>
                 <div className='grid grid-cols-3 gap-4'>

@@ -17,6 +17,7 @@ const Home = ({ tutorStat }: Props) => {
 
         <meta property="og:url" content="https://geacher.vercel.app" />
         <meta property="og:image" content="https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview.png" />
+        <meta property="og:description" content="Geacher คือแหล่งรวมติวเตอร์คุณภาพระดับเทพ การันตีด้วยดีกรีเด็ก KVIS" />
 
         <meta property="og:title" content="Geacher | Tutors from kvis" />
         <meta property="twitter:card" content="summary_large_image" />
@@ -30,14 +31,14 @@ const Home = ({ tutorStat }: Props) => {
 
 
         <div className='bg-gray-900 pr-4 z-10'>
-          <h1 className="text-4xl sm:text-6xl font-bold text-pink-500 ">
+          <h1 className="text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-pink-500 ">
             GEACHER
           </h1>
         </div>
         <div className='w-full border-t border-4 border-pink-500 -mt-3 '></div>
 
         <h1 className='z-30 relative font-Prompt text-lg sm:text-3xl text-left text-rose-300 mt-4'>
-          แหล่งรวมติวเตอร์คุณภาพเยี่ยม
+          แหล่งรวมติวเตอร์คุณภาพระดับเทพ
           <br />
           การันตีด้วยดีกรีเด็ก KVIS
         </h1>
@@ -56,7 +57,7 @@ const Home = ({ tutorStat }: Props) => {
       <section className='-mt-20 max-w-4xl flex w-full flex-col pb-20 items-start justify-start px-10 sm:px-20 text-center'>
         <div className='w-full flex flex-col items-end '>
           <div className='bg-gray-900 z-10 pl-4'>
-            <h1 className="text-4xl sm:text-6xl font-bold text-blue-400 mr-0">
+            <h1 className="text-4xl sm:text-6xl font-bold mr-0 text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-500">
               SUBJECTS
             </h1>
           </div>

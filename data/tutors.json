@@ -82,5 +82,17 @@
     "ig": "https://instagram.com/petch_ppo",
     "line": "",
     "fb": "https://web.facebook.com/Petch.Pojchara"
+  },
+  {
+    "firstname": "Thiti",
+    "lastname": "Thaloengboonsiri",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m316.jpg",
+    "id": "5m316",
+    "subjects": ["Mathematics", "English", "BMAT"],
+    "tel": "",
+    "ig": "https://instagram.com/ham_htt",
+    "line": "hamthiti",
+    "fb": "https://www.facebook.com/thiti.thaloengboonsiri/"
   }
 ]
