@@ -1,16 +1,10 @@
-type StatCardType = {
-    name: string,
-    tutors: number
-
-}
+import { toThai } from '../utils/toThai'
+import { TutorStat } from '../models/tutorStat'
 
 
-const StatCard = ({ name, tutors }: StatCardType) => {
+const StatCard = ({ name, tutors }: TutorStat) => {
 
-    const toThai = new Map()
-    toThai.set('Physics', 'ฟิสิกส์')
-    toThai.set('Mathematics', 'คณิตศาสตร์')
-    toThai.set('English', 'ภาษาอังกฤษ')
+
 
 
     return (

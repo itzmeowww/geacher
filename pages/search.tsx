@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-
+import { toThai } from '../utils/toThai'
 
 import Checkbox from '../components/Checkbox'
 import TutorCard from '../components/TutorCard'
@@ -38,9 +38,7 @@ const Search = ({ tutors, tutorStats }: Props) => {
     }, [])
 
 
-    const matchedTutors = () => {
 
-    }
 
     useEffect(() => {
 
@@ -115,7 +113,7 @@ const Search = ({ tutors, tutorStats }: Props) => {
                     <div className='col-span-2 flex flex-col'>
                         {
                             subjectList.map((subject, idx) => {
-                                return <Checkbox label={subject} onCheckboxChange={() => {
+                                return <Checkbox label={toThai.get(subject) === undefined ? subject : toThai.get(subject)} onCheckboxChange={() => {
                                     let newSubjectCheck = subjectCheck
                                     newSubjectCheck.set(subject, !newSubjectCheck.get(subject))
                                     setSubjectCheck(newSubjectCheck)

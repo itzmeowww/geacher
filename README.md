@@ -1,7 +1,6 @@
 # Geacher
 
-แหล่งรวมติวเตอร์คุณภาพเยี่ยม
-การันตีด้วยดีกรีเด็ก KVIS
+![](public/preview.png)
 
 # Logic
 

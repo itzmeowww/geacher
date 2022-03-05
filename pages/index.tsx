@@ -42,7 +42,7 @@ const Home = ({ tutorStat }: Props) => {
           การันตีด้วยดีกรีเด็ก KVIS
         </h1>
         <a href="/search" className='mx-auto mt-12'>
-          <button className='z-30  relative text-xl font-Prompt bg-white hover:bg-slate-200  active:bg-gray-400 px-12 py-1 rounded '>
+          <button className='z-30 relative text-xl font-Prompt bg-white hover:bg-slate-200  active:bg-gray-400 px-12 py-1 rounded '>
             ค้นหาเลย
           </button>
         </a>
