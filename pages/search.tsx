@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 
 
 import Checkbox from '../components/Checkbox'
+import TutorCard from '../components/TutorCard'
 
 type Tutor = {
     firstname: string
@@ -44,32 +45,30 @@ const Search = ({ tutors, tutorStat }) => {
 
     useEffect(() => {
 
+        let allUncheck = true
+
+        subjectList.forEach((subjectName) => {
+            if (subjectCheck.get(subjectName)) {
+                allUncheck = false
+            }
+        })
+
         const newMatchedTutor = tutors.map((tutor: Tutor) => {
-            let match = false
-            if (tutor.subjects) tutor.subjects.forEach((subject) => {
-                if (subjectCheck.get(subject)) {
-                    match = true
+            let match = true
+
+            subjectList.forEach((subjectName) => {
+                if (subjectCheck.get(subjectName)) {
+                    console.log(tutor.subjects)
+                    if (tutor.subjects.lastIndexOf(subjectName) === -1) {
+                        match = false
+                    }
                 }
             })
-            if (match)
+
+
+            if (match || allUncheck)
                 return (
-
-                    <div className='flex flex-col items-center justify-center bg-white rounded-xl p-2'>
-
-                        <div className='w-60 h-60 '>
-                            <img src={tutor.poster} alt="" width="240" className='z-10 absolute' />
-                            <div className='w-60 h-60 bg-slate-300 animate-pulse absolute
-                            '></div>
-                        </div>
-                        <div className='text-lg font-Prompt mt-2'>
-                            {`${tutor.firstname} ${tutor.lastname}`}
-                        </div>
-                        <a href={`u/${tutor.id}`}>
-                            <button className='font-Prompt bg-blue-600 px-4 py-1 my-2 rounded text-white'>
-                                เพิ่มเติม
-                            </button>
-                        </a>
-                    </div>
+                    <TutorCard firstname={tutor.firstname} lastname={tutor.lastname} poster={tutor.poster} id={tutor.id} />
                 )
         })
         setMatchedTutor(newMatchedTutor)
@@ -100,8 +99,13 @@ const Search = ({ tutors, tutorStat }) => {
             </Head>
 
             <main className=" text-white font-Prompt max-w-4xl  flex w-full flex-col items-center justify-start px-10  md:px-20 text-left">
+                <div className='right-14 md:right-40 -top-2 absolute'>
+                    <div className='z-10 absolute w-12 h-12 rounded-full animate-v-move' style={{ backgroundImage: "linear-gradient(135deg, #fdba74, #f97316)" }}>
+                    </div>
+                </div>
+
                 <a href="../" className='text-white text-md font-Prompt underline mb-4 mt-6'>{"ย้อนกลับ"}</a>
-                <h1 className='text-2xl md:text-3xl my-8 text-pink-500'>
+                <h1 className='z-20 text-2xl md:text-3xl my-8 text-pink-500'>
                     ค้นหาติวเตอร์สำหรับคุณ
                 </h1>
                 <div className='grid grid-cols-3 gap-4'>

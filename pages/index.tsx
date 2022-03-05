@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import StatCard from '../components/StatCard'
 
 
 const Home = ({ tutorStat }) => {
@@ -20,7 +21,7 @@ const Home = ({ tutorStat }) => {
 
       <main className="max-w-4xl flex w-full flex-1 min-h-screen flex-col items-start justify-center px-10 sm:px-20  text-left overflow-hidden">
         <div className='-left-10 md:-left-6 lg:left-3 top-10 absolute'>
-          <div className='z-10 absolute w-36 h-36 rounded-full' style={{ backgroundImage: "linear-gradient(135deg, #a5b4fc, #6366f1)" }}>
+          <div className='z-10 absolute w-36 h-36 rounded-full animate-h-move' style={{ backgroundImage: "linear-gradient(135deg, #a5b4fc, #6366f1)" }}>
           </div>
         </div>
 
@@ -42,8 +43,8 @@ const Home = ({ tutorStat }) => {
             ค้นหาเลย
           </button>
         </a>
-        <div className='absolute right-16 md:right-32 bottom-36'>
-          <div className='z-10 absolute w-12 h-12 ' style={{ backgroundImage: "linear-gradient(135deg, #fdba74, #f97316)" }}>
+        <div className='absolute right-16 md:right-32 bottom-40'>
+          <div className='z-10 absolute w-12 h-12 animate-v-move' style={{ backgroundImage: "linear-gradient(135deg, #fdba74, #f97316)" }}>
           </div>
 
         </div>
@@ -59,7 +60,7 @@ const Home = ({ tutorStat }) => {
           <div className='w-full border-t border-4 border-blue-400 -mt-3 '></div>
         </div>
 
-        <div className='text-white font-Prompt mx-auto mt-6 mb-8 text-xl'>
+        <div className='text-cyan-100 font-Prompt mx-auto mt-6 mb-8 text-xl'>
           พวกเรามีติวเตอร์
         </div>
         <div className='w-full flex justify-center'>
@@ -68,18 +69,10 @@ const Home = ({ tutorStat }) => {
             {
               tutorStat.map((subject) => {
                 return (
-                  <a href={`/search?sub=${subject.name}`}>
-                    <div className='flex flex-col items-center justify-center font-Prompt w-32 bg-white h-32 rounded-xl'>
-                      <div className='text-xl'>
-                        {subject.name}
-                      </div>
-                      <div className='text-3xl'>
-                        {subject.tutors} คน
-                      </div>
-
-                    </div>
-                  </a>)
-              })
+                  <StatCard name={subject.name} tutors={subject.tutors} />
+                );
+              }
+              )
             }
           </div>
         </div>

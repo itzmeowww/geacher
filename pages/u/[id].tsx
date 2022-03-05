@@ -28,19 +28,6 @@ const TutorPage = ({ tutor }) => {
     // const { id } = router.query
 
     const path = 'https://geacher.vercel.app' + router.asPath
-
-    // useEffect(() => {
-
-    //     if (id === undefined) return
-
-    //     const url = "https://geacher.vercel.app/api/getTutor/" + id
-    //     fetch(url).then((res) => {
-    //         res.json().then((data) => {
-    //             setTutor(data)
-
-    //         })
-    //     })
-    // }, [id])
     const [isCopied, setIsCopied] = useState(false);
 
     // This is the function we wrote earlier
@@ -89,10 +76,13 @@ const TutorPage = ({ tutor }) => {
 
             </Head>
 
-            <main className="max-w-4xl flex flex-1 w-full  flex-col items-start justify-start px-10 sm:px-20 pt-20  text-left overflow-hidden">
-
-                <a href="../" className='text-white text-md font-Prompt underline mb-4'>{"ย้อนกลับ"}</a>
-                <div className='bg-gray-900 z-10 pr-4'>
+            <main className="max-w-4xl flex flex-1 w-full  flex-col items-start justify-start px-10 sm:px-20 pt-20 pb-10  text-left overflow-hidden">
+                <div className='-left-14 md:-left-16 -top-6 absolute'>
+                    <div className='z-10 absolute w-36 h-36 rounded-full animate-h-move' style={{ backgroundImage: "linear-gradient(135deg, #c4b5fd, #8b5cf6)" }}>
+                    </div>
+                </div>
+                <a href="../" className='z-20 text-white text-md font-Prompt underline mb-4'>{"ย้อนกลับ"}</a>
+                <div className='z-20 bg-gray-900  pr-4'>
                     <h1 className="text-4xl sm:text-6xl font-bold text-pink-500 ">
                         {tutor === undefined ? <div className='animate-pulse w-36 h-6 sm:h-10 bg-slate-700 rounded' /> : `${tutor.firstname} ${tutor.lastname} #${tutor.batch}`}
                     </h1>
@@ -105,26 +95,26 @@ const TutorPage = ({ tutor }) => {
                         {tutor === undefined ? <div className='w-full h-full bg-slate-300 animate-pulse' ></div> : <img src={tutor.poster} alt="" className='w-full' />}
                     </div>
                 </div>
-                <button className='bg-white px-4 py-1 mx-auto font-Prompt rounded mb-6' onClick={handleCopyClick}>{isCopied ? 'คัดลอกแล้ว' : 'แชร์เลย'}</button>
+                <button className='bg-blue-500 text-white text-lg px-4 py-1 mx-auto font-Prompt rounded mb-6' onClick={handleCopyClick}>{isCopied ? 'คัดลอกแล้ว' : 'แชร์เลย'}</button>
             </main >
 
             <section className='max-w-4xl flex w-full flex-col pb-20 items-end justify-start px-10 sm:px-20 text-center'>
                 <div className='bg-gray-900 z-10 pl-4'>
-                    <h1 className="text-4xl sm:text-6xl font-bold text-blue-400 mr-0">
+                    <h1 className="text-4xl sm:text-6xl font-bold text-orange-400 mr-0">
                         CONTACTS
                     </h1>
                 </div>
-                <div className='w-full border-t border-4 border-blue-400 -mt-3 '></div>
+                <div className='w-full border-t border-4 border-orange-400 -mt-3 '></div>
 
-                <div className='w-full flex flex-col md:flex-row gap-4 items-center flex-wrap justify-middle mt-10'>
+                <div className=' w-full flex flex-col md:flex-row gap-4 items-center  flex-wrap justify-middle mt-10'>
                     {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''>
-                        <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'> <Image src="/phoneIcon.svg" alt="Phone Logo" height={32} width={32} /> {tutor.tel}</button> </a> : <></>}
+                        <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'> <Image src="/phoneIcon.svg" alt="Phone Logo" height={32} width={32} /> {tutor.tel}</button> </a> : <></>}
                     {(tutor && tutor.ig) ? <a href={`https://instagram.com/${tutor.ig}`} className=''>
-                        <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'> <Image src="/igIcon.svg" alt="Instagram Logo" height={28} width={28} /> Instagram </button></a> : <></>}
+                        <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2 '> <Image src="/igIcon.svg" alt="Instagram Logo" height={32} width={32} /> Instagram </button></a> : <></>}
                     {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''>
-                        <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'><Image src="/fbIcon.svg" alt="Facebook Logo" height={32} width={32} />Facebook</button> </a> : <></>}
+                        <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'><Image src="/fbIcon.svg" alt="Facebook Logo" height={32} width={32} />Facebook</button> </a> : <></>}
                     {(tutor && tutor.line) ? <a className=''>
-                        <button className='px-2 py-1 bg-white rounded text-md flex items-center justify-center gap-2'> <Image src="/lineIcon.svg" alt="Line Logo" height={32} width={32} /> {tutor.line} </button></a> : <></>}
+                        <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'> <Image src="/lineIcon.svg" alt="Line Logo" height={32} width={32} /> {tutor.line} </button></a> : <></>}
                 </div>
             </section>
             <footer className="text-white flex h-24 w-full items-center justify-center border-t">

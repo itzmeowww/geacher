@@ -34,5 +34,53 @@
     "ig": "https://instagram.com/thanyawitp",
     "line": "pleumthanyawit",
     "fb": "https://www.facebook.com/thanyawit.plukmontol.3"
+  },
+  {
+    "firstname": "Nattapol ",
+    "lastname": "Chanpaisit",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m307.jpeg",
+    "id": "5m307",
+    "subjects": ["Physics", "Mathematics"],
+    "tel": "",
+    "ig": "https://instagram.com/nattapol.chan",
+    "line": "",
+    "fb": ""
+  },
+  {
+    "firstname": "Sukpawat",
+    "lastname": "Moungsombat",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m349.jpeg",
+    "id": "5m349",
+    "subjects": ["Chemistry", "Biology", "Mathematics", "English"],
+    "tel": "0956264930",
+    "ig": "https://instagram.com/eped.official",
+    "line": "asyawei",
+    "fb": "https://www.facebook.com/profile.php?id=100009950970432"
+  },
+  {
+    "firstname": "Krittitee",
+    "lastname": "Ratchanan",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m290.png",
+    "id": "5m290",
+    "subjects": ["English", "Computer", "BMAT"],
+    "tel": "",
+    "ig": "https://instagram.com/autoratch_",
+    "line": "autorockza",
+    "fb": "https://www.facebook.com/Autoratch"
+  },
+  {
+    "firstname": "Pojchara",
+    "lastname": "Ounjaroen",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m326.JPG",
+    "id": "5m326",
+    "subjects": ["Physics", "Mathematics", "English", "Social Studies"],
+    "tel": "",
+    "ig": "https://instagram.com/petch_ppo",
+    "line": "",
+    "fb": "https://web.facebook.com/Petch.Pojchara"
   }
 ]
