@@ -59,7 +59,10 @@ const TutorPage = ({ tutor }: Props) => {
                 }
 
                 {
-                    tutor === undefined ? <meta property="og:description" content="" /> : <meta property="og:description" content={`ติวเตอร์วิชา ${tutor.subjects.join(', ')} การันตีคุณภาพด้วยดีกรีเด็ก KVIS`} />
+                    tutor === undefined ? <meta property="og:description" content="" /> : <meta property="og:description" content={`ติวเตอร์วิชา ${tutor.subjects.map((subject: string) => {
+                        if (toThai.get(subject) === undefined) return subject
+                        return toThai.get(subject)
+                    }).join(', ')} การันตีคุณภาพระดับเทพ ด้วยดีกรีเด็ก KVIS`} />
                 }
 
 
@@ -132,7 +135,7 @@ const TutorPage = ({ tutor }: Props) => {
                     </div>
                 </div>
             </section>
-            <footer className="p-5 text-white flex flex-col gap-4 w-full items-center justify-center border-t ">
+            <footer className="p-5 text-white flex flex-col gap-4 w-full items-center justify-center border-t text-center">
                 <a
                     className="flex items-center justify-center gap-2"
                     href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
