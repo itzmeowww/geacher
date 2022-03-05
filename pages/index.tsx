@@ -24,25 +24,25 @@ const Home = ({ tutorStat }: Props) => {
 
       <main className="max-w-4xl flex w-full flex-1 min-h-screen flex-col items-start justify-center px-10 sm:px-20  text-left overflow-hidden">
         <div className='-left-10 md:-left-6 lg:left-3 top-10 absolute'>
-          <div className='z-10 absolute w-36 h-36 rounded-full animate-h-move' style={{ backgroundImage: "linear-gradient(135deg, #a5b4fc, #6366f1)" }}>
+          <div className='z-20 absolute w-36 h-36 rounded-full animate-h-move' style={{ backgroundImage: "linear-gradient(135deg, #a5b4fc, #6366f1)" }}>
           </div>
         </div>
 
 
-        <div className='bg-gray-900 z-10 pr-4'>
+        <div className='bg-gray-900 pr-4 z-10'>
           <h1 className="text-4xl sm:text-6xl font-bold text-pink-500 ">
             GEACHER
           </h1>
         </div>
         <div className='w-full border-t border-4 border-pink-500 -mt-3 '></div>
 
-        <h1 className='font-Prompt text-lg sm:text-3xl text-left text-rose-300 mt-4'>
+        <h1 className='z-30 relative font-Prompt text-lg sm:text-3xl text-left text-rose-300 mt-4'>
           แหล่งรวมติวเตอร์คุณภาพเยี่ยม
           <br />
           การันตีด้วยดีกรีเด็ก KVIS
         </h1>
         <a href="/search" className='mx-auto mt-12'>
-          <button className='text-xl font-Prompt bg-white hover:bg-slate-200  active:bg-gray-400 px-12 py-1 rounded '>
+          <button className='z-30  relative text-xl font-Prompt bg-white hover:bg-slate-200  active:bg-gray-400 px-12 py-1 rounded '>
             ค้นหาเลย
           </button>
         </a>
