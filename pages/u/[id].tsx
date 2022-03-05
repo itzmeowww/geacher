@@ -149,7 +149,8 @@ export async function getStaticPaths() {
         paths.push({ params: { id: tutor.id } })
     })
     return {
-        paths
+        paths,
+        fallback: false
     }
 }
 
