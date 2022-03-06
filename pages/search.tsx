@@ -16,7 +16,9 @@ type Props = {
     tutorStats: TutorStat[]
 }
 const Search = ({ tutors, tutorStats }: Props) => {
-
+    tutors.sort(() => {
+        return Math.random() - 0.5
+    })
     const subjectList: string[] = []
 
     tutorStats.forEach((data) => {
@@ -121,7 +123,7 @@ const Search = ({ tutors, tutorStats }: Props) => {
                     <div className='col-span-2 flex flex-col'>
                         {
                             subjectList.map((subject, idx) => {
-                                return <Checkbox label={toThai.get(subject) === undefined ? subject : toThai.get(subject)} onCheckboxChange={() => {
+                                return <Checkbox key={`${subject}-checkbox`} label={toThai.get(subject) === undefined ? subject : toThai.get(subject)} onCheckboxChange={() => {
                                     let newSubjectCheck = subjectCheck
                                     newSubjectCheck.set(subject, !newSubjectCheck.get(subject))
                                     setSubjectCheck(newSubjectCheck)
