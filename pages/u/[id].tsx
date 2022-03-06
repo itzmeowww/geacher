@@ -21,6 +21,7 @@ const TutorPage = ({ tutor }: Props) => {
 
     const path = 'https://geacher.vercel.app' + router.asPath
     const [isCopied, setIsCopied] = useState(false);
+    const [isCopiedLine, setIsCopiedLine] = useState(false);
 
     // This is the function we wrote earlier
     async function copyTextToClipboard(text: string) {
@@ -42,7 +43,22 @@ const TutorPage = ({ tutor }: Props) => {
                 }, 1500);
             })
             .catch((err) => {
-                console.log(err);
+                // console.log(err);
+            });
+    }
+
+    const handleCopyClickLine = (lineId: string) => {
+        // Asynchronously call copyTextToClipboard
+        copyTextToClipboard(lineId)
+            .then(() => {
+                // If successful, update the isCopied state value
+                setIsCopiedLine(true);
+                setTimeout(() => {
+                    setIsCopiedLine(false);
+                }, 1500);
+            })
+            .catch((err) => {
+                // console.log(err);
             });
     }
 
@@ -122,7 +138,7 @@ const TutorPage = ({ tutor }: Props) => {
                     </h1>
                 </div>
                 <div className='w-full border-t border-4 border-orange-400 -mt-3 '></div>
-                <div className='w-full flex items-center justify-center'>
+                <div className='w-full flex items-center justify-center '>
                     <div className='flex flex-row gap-4 items-center flex-wrap justify-center mt-10 mx-auto'>
                         {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''>
                             <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'> <Image src="/phoneIcon.svg" alt="Phone Logo" height={32} width={32} /> {tutor.tel}</button> </a> : <></>}
@@ -131,7 +147,7 @@ const TutorPage = ({ tutor }: Props) => {
                         {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''>
                             <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'><Image src="/fbIcon.svg" alt="Facebook Logo" height={32} width={32} />Facebook</button> </a> : <></>}
                         {(tutor && tutor.line) ? <a className=''>
-                            <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'> <Image src="/lineIcon.svg" alt="Line Logo" height={32} width={32} /> {tutor.line} </button></a> : <></>}
+                            <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2' onClick={() => handleCopyClickLine(tutor.line)}> <Image src="/lineIcon.svg" alt="Line Logo" height={32} width={32} /> {isCopiedLine ? <h1 className='font-Prompt'>คัดลอกแล้ว</h1> : tutor.line} </button></a> : <></>}
                     </div>
                 </div>
             </section>
