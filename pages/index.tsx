@@ -14,6 +14,8 @@ const Home = ({ tutorStat }: Props) => {
       <Head>
         <title>Geacher | Tutors from kvis</title>
         <link rel="icon" href="/icon.jpg" />
+        <meta name="description" content="Geacher คือแหล่งรวมติวเตอร์คุณภาพระดับเทพ การันตีด้วยดีกรีเด็ก KVIS" />
+        <meta name="keywords" content="Geacher, สอนพิเศษ, เพิ่มเกรด, ติวเตอร์, kvis, กำเนิดวิทย์, ฟิสิกส์, เคมี, ชีวะ, คอมพิวเตอร์, BMAT, สังคม" />
 
         <meta property="og:url" content="https://geacher.vercel.app" />
         <meta property="og:image" content="https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview.png" />
