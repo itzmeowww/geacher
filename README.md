@@ -1,4 +1,4 @@
-# Geacher
+# Geacher | Tutors from kvis
 
 ![](public/preview.png)
 
