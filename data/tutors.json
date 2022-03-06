@@ -106,5 +106,17 @@
     "ig": "https://instagram.com/ham_htt",
     "line": "hamthiti",
     "fb": "https://www.facebook.com/thiti.thaloengboonsiri/"
+  },
+  {
+    "firstname": "Kanok",
+    "lastname": "Sirilapyanonth",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m286.jpeg",
+    "id": "5m286",
+    "subjects": ["Chemistry", "Biology"],
+    "tel": "0955391454",
+    "ig": "https://instagram.com/toei_kanoks",
+    "line": "toeipam",
+    "fb": "https://www.facebook.com/kanok.sirilapyanonth.3"
   }
 ]
