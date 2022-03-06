@@ -1,5 +1,17 @@
 [
   {
+    "firstname": "Thanasan",
+    "lastname": "Kumdee",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m313.jpg",
+    "id": "5m313",
+    "subjects": ["Computer"],
+    "tel": "0845490929",
+    "ig": "https://instagram.com/thnsn_kmd",
+    "line": "thanasankumdee",
+    "fb": "https://www.facebook.com/thanasan.kumdee"
+  },
+  {
     "firstname": "Chindanai",
     "lastname": "Trakantannarong",
     "batch": 5,
