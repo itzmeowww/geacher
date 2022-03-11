@@ -118,5 +118,17 @@
     "ig": "https://instagram.com/toei_kanoks",
     "line": "toeipam",
     "fb": "https://www.facebook.com/kanok.sirilapyanonth.3"
+  },
+  {
+    "firstname": "Chanisa ",
+    "lastname": "Prompattanapakdee",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m299.jpeg",
+    "id": "5m299",
+    "subjects": ["Physics", "Chemistry", "Biology", "Mathematics"],
+    "tel": "0905949951",
+    "ig": "https://instagram.com/mimiemiee__",
+    "line": "0905949951",
+    "fb": ""
   }
 ]
