@@ -98,7 +98,7 @@ const TutorPage = ({ tutor }: Props) => {
                     </div>
                 </div>
                 <a href="../" className='z-20 text-white text-md font-Prompt underline mb-4'>{"ย้อนกลับ"}</a>
-                <div className='z-20 bg-gray-900  pr-4'>
+                <div className='z-20 bg-gray-900  '>
                     <h1 className="text-4xl sm:text-6xl font-bold text-pink-500 ">
                         {
                             tutor === undefined ?
@@ -151,32 +151,32 @@ const TutorPage = ({ tutor }: Props) => {
                     <div className='max-w-lg flex flex-row gap-4 items-center flex-wrap justify-center mt-10 mx-auto'>
                         {(tutor && tutor.tel) ?
                             <a href={`tel:${tutor.tel}`} className=''>
-                                <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
-                                    <BsPhone /> <h1 className='tracking-wide font-sans font-medium l'>{tutor.tel}</h1>
+                                <button className='px-2  py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
+                                    <BsPhone /> <h1 className='tracking-wide font-sans font-medium '>{tutor.tel}</h1>
                                 </button>
                             </a>
                             : <></>
                         }
                         {(tutor && tutor.ig) ?
                             <a href={`${tutor.ig}`} className=''>
-                                <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2 '>
-                                    <BsInstagram /><h1>Instagram</h1>
+                                <button className='px-2  py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2 '>
+                                    <BsInstagram /><h1 className='tracking-wide font-sans font-medium'>Instagram</h1>
                                 </button>
                             </a>
                             : <></>
                         }
                         {(tutor && tutor.fb) ?
                             <a href={`${tutor.fb}`} className=''>
-                                <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
-                                    <BsFacebook /><h1 className='tracking-wide font-sans font-medium l'>Facebook</h1>
+                                <button className='px-2  py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
+                                    <BsFacebook /><h1 className='tracking-wide font-sans font-medium'>Facebook</h1>
                                 </button>
                             </a>
                             : <></>
                         }
                         {(tutor && tutor.line) ? <a className=''>
-                            <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2' onClick={() => handleCopyClickLine(tutor.line)}>
+                            <button className='px-2  py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2' onClick={() => handleCopyClickLine(tutor.line)}>
                                 <BsLine />
-                                <h1 className='tracking-wide font-sans font-medium l'>{isCopiedLine ? <h1 className='font-Prompt'>คัดลอกแล้ว</h1> : tutor.line}</h1>
+                                <h1 className='tracking-wide font-sans font-medium'>{isCopiedLine ? <h1 className='font-Prompt'>คัดลอกแล้ว</h1> : tutor.line}</h1>
                             </button></a> : <></>}
                     </div>
                 </div>
