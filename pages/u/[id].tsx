@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { toThai } from '../../utils/toThai'
-import { SocialMediaIconsReact } from 'social-media-icons-react'
+import { BsLine, BsFacebook, BsInstagram, BsPhone } from 'react-icons/bs'
 
 import { Tutor } from '../../models/tutor'
 
@@ -152,7 +152,7 @@ const TutorPage = ({ tutor }: Props) => {
                         {(tutor && tutor.tel) ?
                             <a href={`tel:${tutor.tel}`} className=''>
                                 <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
-                                    <SocialMediaIconsReact icon="phone" backgroundColor="rgba(0,0,0,0)" iconColor="#000000" size={32} borderColor="rgba(0,0,0,0)" borderWidth="0" url={""} /> <h1 className='tracking-wide font-sans font-medium l'>{tutor.tel}</h1>
+                                    <BsPhone /> <h1 className='tracking-wide font-sans font-medium l'>{tutor.tel}</h1>
                                 </button>
                             </a>
                             : <></>
@@ -160,7 +160,7 @@ const TutorPage = ({ tutor }: Props) => {
                         {(tutor && tutor.ig) ?
                             <a href={`${tutor.ig}`} className=''>
                                 <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2 '>
-                                    <SocialMediaIconsReact icon="instagram" backgroundColor="rgba(0,0,0,0)" iconColor="#000000" size={32} borderColor="rgba(0,0,0,0)" borderWidth="0" url={""} /> <h1 className='tracking-wide font-sans font-medium l'>Instagram</h1>
+                                    <BsInstagram /><h1>Instagram</h1>
                                 </button>
                             </a>
                             : <></>
@@ -168,14 +168,14 @@ const TutorPage = ({ tutor }: Props) => {
                         {(tutor && tutor.fb) ?
                             <a href={`${tutor.fb}`} className=''>
                                 <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
-                                    <SocialMediaIconsReact icon="facebook" backgroundColor="rgba(0,0,0,0)" iconColor="#000000" size={32} borderColor="rgba(0,0,0,0)" borderWidth="0" url={""} /><h1 className='tracking-wide font-sans font-medium l'>Facebook</h1>
+                                    <BsFacebook /><h1 className='tracking-wide font-sans font-medium l'>Facebook</h1>
                                 </button>
                             </a>
                             : <></>
                         }
                         {(tutor && tutor.line) ? <a className=''>
                             <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2' onClick={() => handleCopyClickLine(tutor.line)}>
-                                <SocialMediaIconsReact icon="line-icon" backgroundColor="#fefefe" iconColor="#000000" size={32} borderColor="rgba(0,0,0,0)" borderWidth="0" url={""} />
+                                <BsLine />
                                 <h1 className='tracking-wide font-sans font-medium l'>{isCopiedLine ? <h1 className='font-Prompt'>คัดลอกแล้ว</h1> : tutor.line}</h1>
                             </button></a> : <></>}
                     </div>
