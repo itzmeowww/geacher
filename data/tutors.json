@@ -131,18 +131,16 @@
     "line": "0905949951",
     "fb": ""
   },
-  [
-    {
-      "firstname": "Parthorn",
-      "lastname": "Ammawat",
-      "batch": 5,
-      "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m333.jpeg",
-      "id": "5m333",
-      "subjects": ["Physics", "Mathematics", "English"],
-      "tel": "0892442272",
-      "ig": "https://instagram.com/parthorn_boon",
-      "line": "parthornboon",
-      "fb": "https://www.facebook.com/profile.php?id=100014497842786"
-    }
-  ]
+  {
+    "firstname": "Parthorn",
+    "lastname": "Ammawat",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m333.jpeg",
+    "id": "5m333",
+    "subjects": ["Physics", "Mathematics", "English"],
+    "tel": "0892442272",
+    "ig": "https://instagram.com/parthorn_boon",
+    "line": "parthornboon",
+    "fb": "https://www.facebook.com/profile.php?id=100014497842786"
+  }
 ]
