@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { toThai } from '../../utils/toThai'
-
+import { SocialMediaIconsReact } from 'social-media-icons-react'
 
 import { Tutor } from '../../models/tutor'
 
@@ -62,6 +62,7 @@ const TutorPage = ({ tutor }: Props) => {
             });
     }
 
+
     return (
         <div className="flex w-screen overflow-hidden min-h-screen flex-col items-center justify-center bg-gray-900">
             <Head>
@@ -110,13 +111,20 @@ const TutorPage = ({ tutor }: Props) => {
 
 
                 <div className='w-full mt-6 mb-4 md:mt-20'>
-                    <div className='w-72 md:w-96 h-72 md:h-96 mx-auto'>
+                    <div className='relative w-72 md:w-96 md:h-96 mx-auto'>
                         {tutor === undefined ?
                             <div className='w-full h-full bg-slate-300 animate-pulse' ></div>
                             : <img src={tutor.poster} alt="" className='w-full' />
                         }
+                        {/* <div className='flex justify-end items-center w-full'>
+                            <div className='bg-red-400 text-white shadow -mt-4 -mr-6 -rotate-12 text-sm font-Prompt px-2 py-1 rounded-md'>
+                                ปิดรับสมัคร
+                            </div>
+                        </div> */}
                     </div>
+
                 </div>
+
                 <div className='flex  flex-wrap justify-center items-center mx-auto mb-6 gap-2 text-blue-600'>
                     {tutor === undefined ?
                         <></> :
@@ -132,22 +140,44 @@ const TutorPage = ({ tutor }: Props) => {
             </main >
 
             <section className='max-w-4xl flex w-full flex-col pb-20 items-end justify-start px-10 sm:px-20 text-center'>
-                <div className='bg-gray-900 z-10 pl-4'>
+                <div className='relative bg-gray-900 z-10 pl-4'>
                     <h1 className="text-4xl sm:text-6xl font-bold text-orange-400 mr-0">
                         CONTACTS
                     </h1>
+
                 </div>
                 <div className='w-full border-t border-4 border-orange-400 -mt-3 '></div>
-                <div className='w-full flex items-center justify-center '>
-                    <div className='flex flex-row gap-4 items-center flex-wrap justify-center mt-10 mx-auto'>
-                        {(tutor && tutor.tel) ? <a href={`tel:${tutor.tel}`} className=''>
-                            <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'> <Image src="/phoneIcon.svg" alt="Phone Logo" height={32} width={32} /> {tutor.tel}</button> </a> : <></>}
-                        {(tutor && tutor.ig) ? <a href={`${tutor.ig}`} className=''>
-                            <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2 '> <Image src="/igIcon.svg" alt="Instagram Logo" height={32} width={32} /> Instagram </button></a> : <></>}
-                        {(tutor && tutor.fb) ? <a href={`${tutor.fb}`} className=''>
-                            <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'><Image src="/fbIcon.svg" alt="Facebook Logo" height={32} width={32} />Facebook</button> </a> : <></>}
+                <div className='w-full flex items-center justify-center text-md font-bold '>
+                    <div className='max-w-lg flex flex-row gap-4 items-center flex-wrap justify-center mt-10 mx-auto'>
+                        {(tutor && tutor.tel) ?
+                            <a href={`tel:${tutor.tel}`} className=''>
+                                <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
+                                    <SocialMediaIconsReact icon="phone" backgroundColor="rgba(0,0,0,0)" iconColor="#000000" size={32} borderColor="rgba(0,0,0,0)" borderWidth="0" url={""} /> <h1 className='tracking-wide font-sans font-medium l'>{tutor.tel}</h1>
+                                </button>
+                            </a>
+                            : <></>
+                        }
+                        {(tutor && tutor.ig) ?
+                            <a href={`${tutor.ig}`} className=''>
+                                <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2 '>
+                                    <SocialMediaIconsReact icon="instagram" backgroundColor="rgba(0,0,0,0)" iconColor="#000000" size={32} borderColor="rgba(0,0,0,0)" borderWidth="0" url={""} /> <h1 className='tracking-wide font-sans font-medium l'>Instagram</h1>
+                                </button>
+                            </a>
+                            : <></>
+                        }
+                        {(tutor && tutor.fb) ?
+                            <a href={`${tutor.fb}`} className=''>
+                                <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
+                                    <SocialMediaIconsReact icon="facebook" backgroundColor="rgba(0,0,0,0)" iconColor="#000000" size={32} borderColor="rgba(0,0,0,0)" borderWidth="0" url={""} /><h1 className='tracking-wide font-sans font-medium l'>Facebook</h1>
+                                </button>
+                            </a>
+                            : <></>
+                        }
                         {(tutor && tutor.line) ? <a className=''>
-                            <button className='px-2 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2' onClick={() => handleCopyClickLine(tutor.line)}> <Image src="/lineIcon.svg" alt="Line Logo" height={32} width={32} /> {isCopiedLine ? <h1 className='font-Prompt'>คัดลอกแล้ว</h1> : tutor.line} </button></a> : <></>}
+                            <button className='px-2 pr-4 py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2' onClick={() => handleCopyClickLine(tutor.line)}>
+                                <SocialMediaIconsReact icon="line-icon" backgroundColor="#fefefe" iconColor="#000000" size={32} borderColor="rgba(0,0,0,0)" borderWidth="0" url={""} />
+                                <h1 className='tracking-wide font-sans font-medium l'>{isCopiedLine ? <h1 className='font-Prompt'>คัดลอกแล้ว</h1> : tutor.line}</h1>
+                            </button></a> : <></>}
                     </div>
                 </div>
             </section>
@@ -161,8 +191,7 @@ const TutorPage = ({ tutor }: Props) => {
                     Powered by{' '}
                     <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
                 </a>
-                <a href='https://www.freepik.com/vectors/logo'>Logo vector created by rawpixel.com - www.freepik.com</a>
-                <a href='https://www.freepik.com/vectors/calendar'>Phone vector created by makyzz - www.freepik.com</a>
+
             </footer>
         </div >
     )

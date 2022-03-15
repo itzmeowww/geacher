@@ -4,6 +4,9 @@ import Image from 'next/image'
 import StatCard from '../components/StatCard'
 
 import { TutorStat } from '../models/tutorStat'
+
+import { motion } from "framer-motion"
+
 type Props = {
   tutorStat: TutorStat[]
 }
@@ -33,9 +36,9 @@ const Home = ({ tutorStat }: Props) => {
 
 
         <div className='bg-gray-900 pr-4 z-10'>
-          <h1 className="text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-pink-500 ">
+          <motion.h1 transition={{ delay: 0.1 }} initial={{ opacity: 0.5, scale: 0.5, x: -50 }} animate={{ opacity: 1, scale: 1, x: 0 }} className="text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-pink-500 ">
             GEACHER
-          </h1>
+          </motion.h1>
         </div>
         <div className='w-full border-t border-4 border-pink-500 -mt-3 '></div>
 
