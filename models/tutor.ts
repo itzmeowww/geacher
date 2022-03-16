@@ -4,6 +4,7 @@ export type Tutor = {
   subjects: string[]
   batch: number
   poster: string
+  thumbnail_poster: string
   id: string
   tel?: string
   ig?: string

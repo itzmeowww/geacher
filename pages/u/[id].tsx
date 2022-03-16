@@ -7,6 +7,7 @@ import { toThai } from '../../utils/toThai'
 import { BsLine, BsFacebook, BsInstagram, BsPhone } from 'react-icons/bs'
 
 import { Tutor } from '../../models/tutor'
+import ImageHolder from '../../components/ImageHolder'
 
 type Props = {
     tutor: Tutor
@@ -114,7 +115,8 @@ const TutorPage = ({ tutor }: Props) => {
                     <div className='relative w-72 md:w-96 md:h-96 mx-auto'>
                         {tutor === undefined ?
                             <div className='w-full h-full bg-slate-300 animate-pulse' ></div>
-                            : <img src={tutor.poster} alt={`โปสเตอร์เปิดสอนพิเศษของ ${tutor.firstname} ${tutor.lastname} กำเนิดวิทย์รุ่น ${tutor.batch}`} className='w-full' />
+                            : <ImageHolder url={tutor.poster} alt={`โปสเตอร์เปิดสอนพิเศษของ ${tutor.firstname} ${tutor.lastname} กำเนิดวิทย์รุ่น ${tutor.batch}`} />
+
                         }
                         {/* <div className='flex justify-end items-center w-full'>
                             <div className='bg-red-400 text-white shadow -mt-4 -mr-6 -rotate-12 text-sm font-Prompt px-2 py-1 rounded-md'>

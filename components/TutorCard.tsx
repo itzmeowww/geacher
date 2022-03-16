@@ -17,11 +17,11 @@ const TutorCard = ({ firstname, lastname, id, poster }: TutorCardType) => {
         <div className='w-64 flex flex-col items-center justify-center bg-white rounded-xl p-2'>
 
             <div className='w-60 h-60'>
-                {loading ? <div className='w-60 h-60 bg-slate-300 animate-pulse absolute'></div> : <></>}
-                <img src={poster} alt="" width="240" className='z-10 absolute' onLoad={() => {
-                    setLoading(false)
-                }} />
-
+                {loading ? <div className='w-60 h-60 bg-slate-400 animate-pulse absolute'></div> :
+                    <img src={poster} alt={`โปสเตอร์เปิดสอนพิเศษของ ${firstname} ${lastname}`} width="240" className='z-10 absolute' onLoad={() => {
+                        setLoading(false)
+                    }} />
+                }
             </div>
             <div className='text-lg font-Prompt mt-2 px-2 text-center truncate'>
                 {`${firstname} ${lastname}`}
