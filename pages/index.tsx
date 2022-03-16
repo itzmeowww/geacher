@@ -77,7 +77,7 @@ const Home = ({ tutorStat }: Props) => {
             {
               tutorStat.map((subject) => {
                 return (
-                  <StatCard key={`${subject}-stat`} name={subject.name} tutors={subject.tutors} />
+                  <StatCard key={`${subject.name}-stat`} name={subject.name} tutors={subject.tutors} />
                 );
               }
               )
