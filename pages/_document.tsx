@@ -7,7 +7,7 @@ export default function Document() {
       <Head>
         {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+          src="https://www.googletagmanager.com/gtag/js?id=G-GQ1FX0VTCV"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
