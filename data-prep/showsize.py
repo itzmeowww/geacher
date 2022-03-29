@@ -10,6 +10,7 @@ for name in os.listdir(path):
         os.path.join('public', folder, name)))
 
     im = Image.open(img)
+    print(name, end=' : ')
     print(im.size)
 # # (400, 225)
 # # <class 'tuple'>

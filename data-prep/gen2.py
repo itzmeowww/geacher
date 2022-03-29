@@ -1,16 +1,18 @@
 
 import json
-text = "3/15/2022 12:52:03|Parthorn|Ammawat|5|https://drive.google.com/open?id=1sWffwBmi-gZ1eFxCrq-6xfDULAw_7xIg|333|Physics, Mathematics, English|0892442272|parthorn_boon|parthornboon|https://www.facebook.com/profile.php?id=100014497842786"
+text = "3/29/2022 14:22:27|Puttipol|Penchan|5|https://drive.google.com/open?id=19TS4eR_2-_vagN6o1Nt1YpVT3bXOsQly|331|Physics, Chemistry, Mathematics, Astronomy; Japanese; EJU|0849981928|ppp.pp48|0849981928|https://www.facebook.com/ota.pp48/"
 row = text.split("|")
 data = []
 
+uid = str(row[3]) + "m" + str(row[5])
 data.append(
 
     {
         'firstname': row[1],
         'lastname': row[2],
         'batch': int(row[3]),
-        'poster': 'https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/'+str(row[3]) + "m" + str(row[5]),
+        'poster': 'https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/'+str(row[3]) + "m" + str(row[5]),
+        "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/"+str(row[3]) + "m" + str(row[5]),
         'id': str(row[3]) + "m" + str(row[5]),
         'subjects': row[6].split(', '),
         'tel': row[7],

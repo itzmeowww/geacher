@@ -154,5 +154,23 @@
     "ig": "https://instagram.com/parthorn_boon",
     "line": "parthornboon",
     "fb": "https://www.facebook.com/profile.php?id=100014497842786"
+  },
+  {
+    "firstname": "Puttipol",
+    "lastname": "Penchan",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/5m331.jpg",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/5m331.jpg",
+    "id": "5m331",
+    "subjects": [
+      "Physics",
+      "Chemistry",
+      "Mathematics",
+      "Astronomy; Japanese; EJU"
+    ],
+    "tel": "0849981928",
+    "ig": "https://instagram.com/ppp.pp48",
+    "line": "0849981928",
+    "fb": "https://www.facebook.com/ota.pp48/"
   }
 ]
