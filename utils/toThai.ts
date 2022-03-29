@@ -6,5 +6,7 @@ toThai.set('Chemistry', 'เคมี')
 toThai.set('Biology', 'ชีวะ')
 toThai.set('Computer', 'คอมพิวเตอร์')
 toThai.set('Social Studies', 'สังคมศึกษา')
+toThai.set('Astronomy', 'ดาราศาสตร์')
+toThai.set('Japanese', 'ภาษาญี่ปุ่น')
 
 export { toThai }
