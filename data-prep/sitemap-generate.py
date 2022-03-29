@@ -2,9 +2,9 @@ import json
 import os
 import datetime
 
-now = datetime.datetime.now().isoformat()
+now = datetime.datetime.now().date().isoformat()
 
-
+print(now)
 os.chdir("..")
 
 path = os.getcwd()
@@ -24,13 +24,13 @@ with open(path, 'w') as file:
     file.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
 
     file.write('\t<url>\n')
-    file.write('\t\t<loc>https://geacher.vercel.app/</loc>\n')
+    file.write('\t\t<loc>https://geacher.vercel.app</loc>\n')
     file.write('\t\t<lastmod>' + now + '</lastmod>\n')
     file.write('\t\t<priority>1</priority>\n')
     file.write('\t</url>\n')
 
     file.write('\t<url>\n')
-    file.write('\t\t<loc>https://geacher.vercel.app/search/</loc>\n')
+    file.write('\t\t<loc>https://geacher.vercel.app/search</loc>\n')
     file.write('\t\t<lastmod>' + now + '</lastmod>\n')
     file.write('\t\t<priority>0.9</priority>\n')
     file.write('\t</url>\n')
