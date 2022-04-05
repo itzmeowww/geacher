@@ -7,9 +7,5 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Tutor[]>
 ) {
-  res.status(200).json(
-    tutors.filter((tutor: Tutor) => {
-      return tutor.active
-    })
-  )
+  res.status(200).json(tutors)
 }

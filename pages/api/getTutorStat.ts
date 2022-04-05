@@ -10,18 +10,14 @@ export default function handler(
 ) {
   let tutorStat: TutorStat[] = []
   let cou = new Map()
-  tutors
-    .filter((tutor: Tutor) => {
-      return tutor.active
+  tutors.forEach((tutor: Tutor) => {
+    tutor.subjects.forEach((subject) => {
+      cou.set(
+        subject,
+        cou.get(subject) === undefined ? 1 : cou.get(subject) + 1
+      )
     })
-    .forEach((tutor: Tutor) => {
-      tutor.subjects.forEach((subject) => {
-        cou.set(
-          subject,
-          cou.get(subject) === undefined ? 1 : cou.get(subject) + 1
-        )
-      })
-    })
+  })
 
   const keys = Array.from(cou.keys())
   const values = Array.from(cou.values())
