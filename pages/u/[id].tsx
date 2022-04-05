@@ -86,7 +86,7 @@ const TutorPage = ({ tutor }: Props) => {
 
 
                 {tutor === undefined ? <meta property="og:title" content={`Geacher`} /> : <meta property="og:title" content={`${tutor.firstname} ${tutor.lastname} #${tutor.batch} | Geacher`} />}
-                {tutor === undefined ? <></> : <meta property="og:image" content={`${tutor.poster}`} />}
+                {tutor !== undefined && <meta property="og:image" content={`${tutor.poster}`} />}
 
                 <meta property="twitter:card" content="summary" />
 
@@ -113,7 +113,9 @@ const TutorPage = ({ tutor }: Props) => {
 
                 <div className='w-full mt-6 mb-4 md:mt-20'>
                     <div className='relative w-72 md:w-96 md:h-96 mx-auto'>
-                        {tutor === undefined && <ImageHolder width={1080} height={1080} url={tutor.poster} alt={`โปสเตอร์เปิดสอนพิเศษของ ${tutor.firstname} ${tutor.lastname} กำเนิดวิทย์รุ่น ${tutor.batch}`} />
+                        {tutor !== undefined &&
+                            <ImageHolder width={1080} height={1080} url={tutor.poster} alt={`โปสเตอร์เปิดสอนพิเศษของ ${tutor.firstname} ${tutor.lastname} กำเนิดวิทย์รุ่น ${tutor.batch}`}
+                            />
                         }
                         {tutor.active == false && <div className='flex justify-end items-center w-full'>
                             <div className='bg-red-400 text-white shadow -mt-6 -mr-6 -rotate-12 text-sm font-Prompt px-2 py-1 rounded-md'>
@@ -126,8 +128,7 @@ const TutorPage = ({ tutor }: Props) => {
                 </div>
 
                 <div className='flex  flex-wrap justify-center items-center mx-auto mb-6 gap-2 text-blue-600'>
-                    {tutor === undefined ?
-                        <></> :
+                    {tutor !== undefined &&
                         tutor.subjects.map((subject: string) => {
                             return <a href={`../search/?sub=${subject}`} key={`tag-${subject}`}>
                                 <button className='bg-white rounded px-2 py-1 text-xs font-Prompt'>
@@ -149,29 +150,26 @@ const TutorPage = ({ tutor }: Props) => {
                 <div className='w-full border-t border-4 border-orange-400 -mt-3 '></div>
                 <div className='w-full flex items-center justify-center text-md font-bold '>
                     <div className='max-w-lg flex flex-row gap-4 items-center flex-wrap justify-center mt-10 mx-auto'>
-                        {(tutor && tutor.tel) ?
+                        {(tutor && tutor.tel) &&
                             <a href={`tel:${tutor.tel}`} className=''>
                                 <button className='px-2  py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
                                     <BsPhone /> <h1 className='tracking-wide font-sans font-medium '>{tutor.tel}</h1>
                                 </button>
                             </a>
-                            : <></>
                         }
-                        {(tutor && tutor.ig) ?
+                        {(tutor && tutor.ig) &&
                             <a href={`${tutor.ig}`} className=''>
                                 <button className='px-2  py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2 '>
                                     <BsInstagram /><h1 className='tracking-wide font-sans font-medium'>Instagram</h1>
                                 </button>
                             </a>
-                            : <></>
                         }
-                        {(tutor && tutor.fb) ?
+                        {(tutor && tutor.fb) &&
                             <a href={`${tutor.fb}`} className=''>
                                 <button className='px-2  py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
                                     <BsFacebook /><h1 className='tracking-wide font-sans font-medium'>Facebook</h1>
                                 </button>
                             </a>
-                            : <></>
                         }
                         {(tutor && tutor.line) ? <a className=''>
                             <button className='px-2  py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2' onClick={() => handleCopyClickLine(tutor.line)}>
