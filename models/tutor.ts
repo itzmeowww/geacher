@@ -10,4 +10,5 @@ export type Tutor = {
   ig?: string
   line?: string
   fb?: string
+  active: boolean
 }

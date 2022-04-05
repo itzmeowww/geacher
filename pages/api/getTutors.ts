@@ -1,23 +1,15 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import tutors from '../../data/tutors.json'
-
-type Tutor = {
-  firstname: string
-  lastname: string
-  subjects: string[]
-  batch: number
-  poster: string
-  id: string
-  tel?: string
-  ig?: string
-  line?: string
-  fb?: string
-}
+import { Tutor } from '../../models/tutor'
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Tutor[]>
 ) {
-  res.status(200).json(tutors)
+  res.status(200).json(
+    tutors.filter((tutor: Tutor) => {
+      return tutor.active
+    })
+  )
 }

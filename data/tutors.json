@@ -10,7 +10,8 @@
     "tel": "0845490929",
     "ig": "https://instagram.com/thnsn_kmd",
     "line": "thanasankumdee",
-    "fb": "http://facebook.com/thanasan.kumdee/"
+    "fb": "http://facebook.com/thanasan.kumdee/",
+    "active": false
   },
   {
     "firstname": "Chindanai",
@@ -23,7 +24,8 @@
     "tel": "0961638725",
     "ig": "https://instagram.com/golfchindanai",
     "line": "0961638725",
-    "fb": "https://www.facebook.com/chindanai.trakan"
+    "fb": "https://www.facebook.com/chindanai.trakan",
+    "active": true
   },
   {
     "firstname": "Natthakan",
@@ -36,7 +38,8 @@
     "tel": "0899692513",
     "ig": "https://instagram.com/kowpunnuttagun",
     "line": "kaolizaza",
-    "fb": "https://www.facebook.com/profile.php?id=100008177912027"
+    "fb": "https://www.facebook.com/profile.php?id=100008177912027",
+    "active": true
   },
   {
     "firstname": "Thanyawit",
@@ -49,7 +52,8 @@
     "tel": "0626852188",
     "ig": "https://instagram.com/thanyawitp",
     "line": "pleumthanyawit",
-    "fb": "https://www.facebook.com/thanyawit.plukmontol.3"
+    "fb": "https://www.facebook.com/thanyawit.plukmontol.3",
+    "active": true
   },
   {
     "firstname": "Nattapol ",
@@ -62,7 +66,8 @@
     "tel": "",
     "ig": "https://instagram.com/nattapol.chan",
     "line": "",
-    "fb": ""
+    "fb": "",
+    "active": true
   },
   {
     "firstname": "Sukpawat",
@@ -75,7 +80,8 @@
     "tel": "0956264930",
     "ig": "https://instagram.com/eped.official",
     "line": "asyawei",
-    "fb": "https://www.facebook.com/profile.php?id=100009950970432"
+    "fb": "https://www.facebook.com/profile.php?id=100009950970432",
+    "active": true
   },
   {
     "firstname": "Krittitee",
@@ -88,7 +94,8 @@
     "tel": "",
     "ig": "https://instagram.com/autoratch_",
     "line": "autorockza",
-    "fb": "https://www.facebook.com/Autoratch"
+    "fb": "https://www.facebook.com/Autoratch",
+    "active": true
   },
   {
     "firstname": "Pojchara",
@@ -101,7 +108,8 @@
     "tel": "",
     "ig": "https://instagram.com/petch_ppo",
     "line": "",
-    "fb": "https://web.facebook.com/Petch.Pojchara"
+    "fb": "https://web.facebook.com/Petch.Pojchara",
+    "active": true
   },
   {
     "firstname": "Thiti",
@@ -114,7 +122,8 @@
     "tel": "",
     "ig": "https://instagram.com/ham_htt",
     "line": "hamthiti",
-    "fb": "https://www.facebook.com/thiti.thaloengboonsiri/"
+    "fb": "https://www.facebook.com/thiti.thaloengboonsiri/",
+    "active": true
   },
   {
     "firstname": "Kanok",
@@ -127,7 +136,8 @@
     "tel": "0955391454",
     "ig": "https://instagram.com/toei_kanoks",
     "line": "toeipam",
-    "fb": "https://www.facebook.com/kanok.sirilapyanonth.3"
+    "fb": "https://www.facebook.com/kanok.sirilapyanonth.3",
+    "active": true
   },
   {
     "firstname": "Chanisa ",
@@ -140,7 +150,8 @@
     "tel": "0905949951",
     "ig": "https://instagram.com/mimiemiee__",
     "line": "0905949951",
-    "fb": ""
+    "fb": "",
+    "active": true
   },
   {
     "firstname": "Parthorn",
@@ -153,7 +164,8 @@
     "tel": "0892442272",
     "ig": "https://instagram.com/parthorn_boon",
     "line": "parthornboon",
-    "fb": "https://www.facebook.com/profile.php?id=100014497842786"
+    "fb": "https://www.facebook.com/profile.php?id=100014497842786",
+    "active": true
   },
   {
     "firstname": "Puttipol",
@@ -173,6 +185,7 @@
     "tel": "0849981928",
     "ig": "https://instagram.com/ppp.pp48",
     "line": "0849981928",
-    "fb": "https://www.facebook.com/ota.pp48/"
+    "fb": "https://www.facebook.com/ota.pp48/",
+    "active": true
   }
 ]

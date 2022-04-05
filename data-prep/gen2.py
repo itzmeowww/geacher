@@ -18,7 +18,8 @@ data.append(
         'tel': row[7],
         'ig': 'https://instagram.com/' + row[8],
         'line': row[9],
-        'fb': row[10]
+        'fb': row[10],
+        "active": True
     }
 
 )
