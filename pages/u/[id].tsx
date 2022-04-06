@@ -77,14 +77,14 @@ const TutorPage = ({ tutor }: Props) => {
                 }
 
                 {
-                    tutor !== undefined && <meta property="og:description" content={`ติวเตอร์วิชา ${tutor.subjects.map((subject: string) => {
+                    tutor !== undefined && <meta property="og:description" content={`ติวเตอร์วิชา${tutor.subjects.map((subject: string) => {
                         if (toThai.get(subject) === undefined) return subject
                         return toThai.get(subject)
                     }).join(', ')} การันตีคุณภาพระดับเทพ ด้วยดีกรีเด็ก KVIS`} />
                 }
 
                 {
-                    (tutor !== undefined) && <meta name="description" content={`ติวเตอร์วิชา ${tutor.subjects.map((subject: string) => {
+                    (tutor !== undefined) && <meta name="description" content={`ติวเตอร์วิชา${tutor.subjects.map((subject: string) => {
                         if (toThai.get(subject) === undefined) return subject
                         return toThai.get(subject)
                     }).join(', ')} การันตีคุณภาพระดับเทพ ด้วยดีกรีเด็ก KVIS`} />
