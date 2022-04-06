@@ -73,11 +73,18 @@ const TutorPage = ({ tutor }: Props) => {
 
                 <link rel="icon" href="/icon.jpg" />
                 {
-                    tutor === undefined ? <meta property="og:url" content="https://geacher.vercel.app" /> : <meta property="og:url" content={path} />
+                    tutor !== undefined && <meta property="og:url" content={path} />
                 }
 
                 {
-                    tutor === undefined ? <meta property="og:description" content="" /> : <meta property="og:description" content={`ติวเตอร์วิชา ${tutor.subjects.map((subject: string) => {
+                    tutor !== undefined && <meta property="og:description" content={`ติวเตอร์วิชา ${tutor.subjects.map((subject: string) => {
+                        if (toThai.get(subject) === undefined) return subject
+                        return toThai.get(subject)
+                    }).join(', ')} การันตีคุณภาพระดับเทพ ด้วยดีกรีเด็ก KVIS`} />
+                }
+
+                {
+                    (tutor !== undefined) && <meta name="description" content={`ติวเตอร์วิชา ${tutor.subjects.map((subject: string) => {
                         if (toThai.get(subject) === undefined) return subject
                         return toThai.get(subject)
                     }).join(', ')} การันตีคุณภาพระดับเทพ ด้วยดีกรีเด็ก KVIS`} />

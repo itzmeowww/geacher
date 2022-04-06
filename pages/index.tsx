@@ -8,17 +8,21 @@ import { TutorStat } from '../models/tutorStat'
 import { motion } from "framer-motion"
 
 type Props = {
-  tutorStat: TutorStat[]
+  tutorStats: TutorStat[]
 }
-const Home = ({ tutorStat }: Props) => {
+const Home = ({ tutorStats }: Props) => {
+  const subjectList: string[] = []
 
+  tutorStats.forEach((data) => {
+    subjectList.push(data.name)
+  })
   return (
     <div className="flex w-screen overflow-hidden min-h-screen flex-col items-center justify-center bg-gray-900">
       <Head>
         <title>Geacher | Tutors from kvis</title>
         <link rel="icon" href="/icon.jpg" />
         <meta name="description" content="Geacher คือแหล่งรวมติวเตอร์คุณภาพระดับเทพ การันตีด้วยดีกรีเด็ก KVIS" />
-        <meta name="keywords" content="Geacher, สอนพิเศษ, เพิ่มเกรด, ติวเตอร์, kvis, กำเนิดวิทย์, ฟิสิกส์, เคมี, ชีวะ, คอมพิวเตอร์, BMAT, สังคม" />
+        <meta name="keywords" content={`Geacher, สอนพิเศษ, เพิ่มเกรด, kvis, สอวน., สอบเข้า, ติวเตอร์, ${subjectList.join(", ")}`} />
 
         <meta property="og:url" content="https://geacher.vercel.app" />
         <meta property="og:image" content="https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview.png" />
@@ -75,7 +79,7 @@ const Home = ({ tutorStat }: Props) => {
           <div className='flex flex-row flex-wrap justify-center items-center gap-6'>
 
             {
-              tutorStat.map((subject) => {
+              tutorStats.map((subject) => {
                 return (
                   <StatCard key={`${subject.name}-stat`} name={subject.name} tutors={subject.tutors} />
                 );
@@ -109,9 +113,9 @@ export async function getServerSideProps() {
   // Fetch data from external API
 
   const res = await fetch(`https://geacher.vercel.app/api/getTutorStat`)
-  const tutorStat = await res.json()
+  const tutorStats = await res.json()
 
-  return { props: { tutorStat } }
+  return { props: { tutorStats } }
 }
 
 

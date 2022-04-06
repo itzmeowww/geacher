@@ -91,14 +91,15 @@ const Search = ({ tutors, tutorStats }: Props) => {
     return (
         <div className=" transition-all flex min-h-screen flex-col items-center justify-begin py-2 bg-gray-900">
             <Head>
-                <title>Find your tutor | Geacher</title>
+                <title>ค้นหาติวเตอร์สำหรับคุณ | Geacher</title>
                 <link rel="icon" href="/icon.jpg" />
 
-
+                <meta name="description" content={`พวกเรามีติวเตอร์วิชา${subjectList.join(", ")}`} />
+                <meta name="keywords" content={`Geacher, สอนพิเศษ, เพิ่มเกรด, kvis, สอวน., สอบเข้า, ติวเตอร์, ${subjectList.join(", ")}`} />
                 <meta property="og:url" content="https://geacher.vercel.app/search" />
 
-                <meta property="og:title" content="Find your tutor | Geacher" />
-                <meta property="og:description" content="ค้นหาติวเตอร์ของคุณด้วย Geacher" />
+                <meta property="og:title" content="ค้นหาติวเตอร์สำหรับคุณ | Geacher" />
+                <meta property="og:description" content={`พวกเรามีติวเตอร์วิชา${subjectList.join(", ")}`} />
 
                 <meta property="twitter:card" content="summary" />
 
@@ -134,9 +135,9 @@ const Search = ({ tutors, tutorStats }: Props) => {
 
                     </div>
 
-                </div>
+                </div >
 
-            </main>
+            </main >
 
             <section className='flex justify-center mt-12 mb-6 px-10 md:px-20 w-full'>
                 <div className='w-full flex justify-center'>
