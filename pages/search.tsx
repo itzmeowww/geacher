@@ -103,12 +103,12 @@ const Search = ({ tutors, tutorStats }: Props) => {
                 <title>ค้นหาติวเตอร์สำหรับคุณ | Geacher</title>
                 <link rel="icon" href="/icon.jpg" />
 
-                <meta name="description" content={`พวกเรามีติวเตอร์วิชา${thaiSubjectList.join(", ")}`} />
+                <meta name="description" content={`พวกเรามีติวเตอร์วิชา${thaiSubjectList.join(", ")} ค้นหาติวเตอร์สำหรับคุณได้เลย!`} />
                 <meta name="keywords" content={`Geacher, สอนพิเศษ, เพิ่มเกรด, kvis, สอวน., สอบเข้า, ติวเตอร์, ${subjectList.join(", ")}`} />
                 <meta property="og:url" content="https://geacher.vercel.app/search" />
                 <meta property="og:image" content="https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview.png" />
                 <meta property="og:title" content="ค้นหาติวเตอร์สำหรับคุณ | Geacher" />
-                <meta property="og:description" content={`พวกเรามีติวเตอร์วิชา${thaiSubjectList.join(", ")}`} />
+                <meta property="og:description" content={`พวกเรามีติวเตอร์วิชา${thaiSubjectList.join(", ")} ค้นหาติวเตอร์สำหรับคุณได้เลย!`} />
 
                 <meta property="twitter:card" content="summary" />
 
