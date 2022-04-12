@@ -187,5 +187,19 @@
     "line": "0849981928",
     "fb": "https://www.facebook.com/ota.pp48/",
     "active": true
+  },
+  {
+    "firstname": "Thanapat",
+    "lastname": "Techataweekul ",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/5m312.jpg",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/5m312.jpg",
+    "id": "5m312",
+    "subjects": ["Mathematics", "Computer"],
+    "tel": "0853929220",
+    "ig": "https://instagram.com/tt_sstyle",
+    "line": "ikq-atom",
+    "fb": "https://www.facebook.com/profile.php?id=100012350855304",
+    "active": true
   }
 ]
