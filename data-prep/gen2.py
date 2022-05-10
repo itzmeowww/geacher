@@ -1,6 +1,6 @@
 
 import json
-text = "3/29/2022 14:22:27|Puttipol|Penchan|5|https://drive.google.com/open?id=19TS4eR_2-_vagN6o1Nt1YpVT3bXOsQly|331|Physics, Chemistry, Mathematics, Astronomy; Japanese; EJU|0849981928|ppp.pp48|0849981928|https://www.facebook.com/ota.pp48/"
+text = "5/9/2022 14:47:15|Suphawit |Promkhot|5|https://drive.google.com/open?id=1epQqjFq37V78tLThctcVgUvOzI8UcUnT|344|Mathematics, English|0636254626|mac._.ma_c|suphawitmac|https://www.facebook.com/profile.php?id=100010924725986"
 row = text.split("|")
 data = []
 
@@ -25,6 +25,5 @@ data.append(
 )
 
 json_string = json.dumps(data)
-
 with open('json_data.json', 'w') as outfile:
     outfile.write(json_string)

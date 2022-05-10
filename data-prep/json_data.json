@@ -1,20 +1,16 @@
 [
   {
-    "firstname": "Puttipol",
-    "lastname": "Penchan",
+    "firstname": "Suphawit ",
+    "lastname": "Promkhot",
     "batch": 5,
-    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/posters/5m331",
-    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/5m331",
-    "id": "5m331",
-    "subjects": [
-      "Physics",
-      "Chemistry",
-      "Mathematics",
-      "Astronomy; Japanese; EJU"
-    ],
-    "tel": "0849981928",
-    "ig": "https://instagram.com/ppp.pp48",
-    "line": "0849981928",
-    "fb": "https://www.facebook.com/ota.pp48/"
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/5m344",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/5m344",
+    "id": "5m344",
+    "subjects": ["Mathematics", "English"],
+    "tel": "0636254626",
+    "ig": "https://instagram.com/mac._.ma_c",
+    "line": "suphawitmac",
+    "fb": "https://www.facebook.com/profile.php?id=100010924725986",
+    "active": true
   }
 ]

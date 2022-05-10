@@ -201,5 +201,19 @@
     "line": "ikq-atom",
     "fb": "https://www.facebook.com/profile.php?id=100012350855304",
     "active": true
+  },
+  {
+    "firstname": "Suphawit ",
+    "lastname": "Promkhot",
+    "batch": 5,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/5m344.jpeg",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/5m344.jpeg",
+    "id": "5m344",
+    "subjects": ["Mathematics", "English"],
+    "tel": "0636254626",
+    "ig": "https://instagram.com/mac._.ma_c",
+    "line": "suphawitmac",
+    "fb": "https://www.facebook.com/profile.php?id=100010924725986",
+    "active": true
   }
 ]
