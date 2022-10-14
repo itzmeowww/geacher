@@ -1,6 +1,4 @@
-import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { toThai } from '../utils/toThai'
@@ -10,6 +8,7 @@ import TutorCard from '../components/TutorCard'
 
 import { Tutor } from '../models/tutor'
 import { TutorStat } from '../models/tutorStat'
+import Footer from '../components/Footer'
 
 type Props = {
     tutors: Tutor[]
@@ -157,17 +156,7 @@ const Search = ({ tutors, tutorStats }: Props) => {
                     </div>
                 </div>
             </section>
-            <footer className="text-white flex h-24 w-full items-center justify-center border-t">
-                <a
-                    className="flex items-center justify-center gap-2"
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-                </a>
-            </footer>
+            <Footer />
         </div >
     )
 }

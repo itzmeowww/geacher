@@ -1,6 +1,5 @@
-import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { toThai } from '../../utils/toThai'
@@ -8,6 +7,7 @@ import { BsLine, BsFacebook, BsInstagram, BsPhone } from 'react-icons/bs'
 
 import { Tutor } from '../../models/tutor'
 import ImageHolder from '../../components/ImageHolder'
+import Footer from '../../components/Footer'
 
 type Props = {
     tutor: Tutor
@@ -160,7 +160,9 @@ const TutorPage = ({ tutor }: Props) => {
                         {(tutor && tutor.tel) &&
                             <a href={`tel:${tutor.tel}`} className=''>
                                 <button className='px-2  py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
-                                    <BsPhone /> <h1 className='tracking-wide font-sans font-medium '>{tutor.tel}</h1>
+                                    <BsPhone /> <h1 className='tracking-wide font-sans font-medium '>{tutor.tel.split('').map((letter, idx) => {
+                                        return <span>{letter}</span>
+                                    })}</h1>
                                 </button>
                             </a>
                         }
@@ -186,18 +188,7 @@ const TutorPage = ({ tutor }: Props) => {
                     </div>
                 </div>
             </section>
-            <footer className="p-5 text-white flex flex-col gap-4 w-full items-center justify-center border-t text-center">
-                <a
-                    className="flex items-center justify-center gap-2"
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-                </a>
-
-            </footer>
+            <Footer />
         </div >
     )
 }
