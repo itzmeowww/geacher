@@ -2,6 +2,7 @@ import json
 import os
 import datetime
 
+site = 'https://geacher.thnsnkmd.com'
 now = datetime.datetime.now().date().isoformat()
 
 print(now)
@@ -24,20 +25,20 @@ with open(path, 'w') as file:
     file.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
 
     file.write('\t<url>\n')
-    file.write('\t\t<loc>https://geacher.vercel.app</loc>\n')
+    file.write(f'\t\t<loc>{site}</loc>\n')
     file.write('\t\t<lastmod>' + now + '</lastmod>\n')
     file.write('\t\t<priority>1</priority>\n')
     file.write('\t</url>\n')
 
     file.write('\t<url>\n')
-    file.write('\t\t<loc>https://geacher.vercel.app/search</loc>\n')
+    file.write(f'\t\t<loc>{site}/search</loc>\n')
     file.write('\t\t<lastmod>' + now + '</lastmod>\n')
     file.write('\t\t<priority>0.9</priority>\n')
     file.write('\t</url>\n')
 
     for x in uid:
         file.write('\t<url>\n')
-        file.write('\t\t<loc>https://geacher.vercel.app/u/' + x + '</loc>\n')
+        file.write(f'\t\t<loc>{site}/u/' + x + '</loc>\n')
         file.write('\t\t<lastmod>' + now + '</lastmod>\n')
         file.write('\t\t<priority>0.8</priority>\n')
         file.write('\t</url>\n')

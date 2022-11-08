@@ -104,7 +104,7 @@ const Search = ({ tutors, tutorStats }: Props) => {
 
                 <meta name="description" content={`พวกเรามีติวเตอร์วิชา${thaiSubjectList.join(", ")} ค้นหาติวเตอร์สำหรับคุณได้เลย!`} />
                 <meta name="keywords" content={`Geacher, สอนพิเศษ, เพิ่มเกรด, kvis, สอวน., สอบเข้า, ติวเตอร์, ${subjectList.join(", ")}`} />
-                <meta property="og:url" content="https://geacher.vercel.app/search" />
+                <meta property="og:url" content="https://geacher.thnsnkmd.com/search" />
                 <meta property="og:image" content="https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview.png" />
                 <meta property="og:title" content="ค้นหาติวเตอร์สำหรับคุณ | Geacher" />
                 <meta property="og:description" content={`พวกเรามีติวเตอร์วิชา${thaiSubjectList.join(", ")} ค้นหาติวเตอร์สำหรับคุณได้เลย!`} />
@@ -164,10 +164,10 @@ const Search = ({ tutors, tutorStats }: Props) => {
 export async function getServerSideProps() {
     // Fetch data from external API
 
-    const res = await fetch(`https://geacher.vercel.app/api/getTutors`)
+    const res = await fetch(`https://geacher.thnsnkmd.com/api/getTutors`)
     const tutors = await res.json()
 
-    const res2 = await fetch(`https://geacher.vercel.app/api/getTutorStat`)
+    const res2 = await fetch(`https://geacher.thnsnkmd.com/api/getTutorStat`)
     const tutorStats = await res2.json()
 
 

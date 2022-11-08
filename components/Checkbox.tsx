@@ -5,7 +5,7 @@ type CheckboxType = {
 }
 const Checkbox = ({ label, isSelected, onCheckboxChange }: CheckboxType) => (
   <div className="form-check">
-    <label>
+    <label className="hover:cursor-pointer">
       <input
         type="checkbox"
         name={label}

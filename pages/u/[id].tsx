@@ -9,6 +9,7 @@ import { Tutor } from '../../models/tutor'
 import ImageHolder from '../../components/ImageHolder'
 import Footer from '../../components/Footer'
 
+const site = 'https://geacher.thnsnkmd.com'
 type Props = {
     tutor: Tutor
 }
@@ -20,7 +21,7 @@ const TutorPage = ({ tutor }: Props) => {
 
     // const { id } = router.query
 
-    const path = 'https://geacher.vercel.app' + router.asPath
+    const path = site + router.asPath
     const [isCopied, setIsCopied] = useState(false);
     const [isCopiedLine, setIsCopiedLine] = useState(false);
 
@@ -201,14 +202,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             id: "0m000"
         }
     }
-    const res = await fetch(`https://geacher.vercel.app/api/getTutor/${params.id}`)
+    const res = await fetch(`${site}/api/getTutor/${params.id}`)
     const tutor: Tutor = await res.json()
 
     return { props: { tutor } }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const res = await fetch(`https://geacher.vercel.app/api/getTutors`)
+    const res = await fetch(`${site}/api/getTutors`)
     const tutors: Tutor[] = await res.json()
     const paths = tutors.map((tutor) => {
         return ({ params: { id: tutor.id } })
