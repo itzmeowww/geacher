@@ -98,6 +98,7 @@ const TutorPage = ({ tutor }: Props) => {
 
                 <meta property="twitter:card" content="summary" />
 
+                <link rel="canonical" href={`${site}/u/${tutor.id}`} />
 
             </Head>
 
