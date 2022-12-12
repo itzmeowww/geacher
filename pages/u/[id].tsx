@@ -162,9 +162,7 @@ const TutorPage = ({ tutor }: Props) => {
                         {(tutor && tutor.tel) &&
                             <a href={`tel:${tutor.tel}`} className=''>
                                 <button className='px-2  py-1 bg-white hover:bg-gray-200 rounded text-md flex items-center justify-center gap-2'>
-                                    <BsPhone /> <h1 className='tracking-wide font-sans font-medium '>{tutor.tel.split('').map((letter, idx) => {
-                                        return <span>{letter}</span>
-                                    })}</h1>
+                                    <BsPhone /> <h1 className='tracking-wide font-sans font-medium '>Phone</h1>
                                 </button>
                             </a>
                         }
