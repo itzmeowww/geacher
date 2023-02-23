@@ -123,13 +123,13 @@ const Search = ({ tutors, tutorStats }: Props) => {
                 <h1 className='z-20 text-2xl md:text-3xl my-8 text-pink-400'>
                     ค้นหาติวเตอร์สำหรับคุณ
                 </h1>
-                <div className='grid grid-cols-3 gap-4'>
+                <div className='grid grid-cols-5 gap-4'>
                     <div className='col-span-1 flex flex-col justify-center items-center border-r-2'>
                         <h1 className='text-lg '>
                             วิชา
                         </h1>
                     </div>
-                    <div className='col-span-2 flex flex-col'>
+                    <div className='col-span-4 grid grid-cols-2 gap-x-4 gap-y-0.5' >
                         {
                             subjectList.map((subject, idx) => {
                                 return <Checkbox key={`${subject}-checkbox`} label={toThai.get(subject) === undefined ? subject : toThai.get(subject)} onCheckboxChange={() => {
