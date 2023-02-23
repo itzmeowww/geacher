@@ -1,16 +1,23 @@
 [
   {
-    "firstname": "Suphawit ",
-    "lastname": "Promkhot",
-    "batch": 5,
-    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/5m344",
-    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/5m344",
-    "id": "5m344",
-    "subjects": ["Mathematics", "English"],
-    "tel": "0636254626",
-    "ig": "https://instagram.com/mac._.ma_c",
-    "line": "suphawitmac",
-    "fb": "https://www.facebook.com/profile.php?id=100010924725986",
+    "firstname": "Parncheewa",
+    "lastname": "Toommakorn",
+    "batch": 6,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/6m396.png",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/6m396.png",
+    "id": "6m396",
+    "subjects": [
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Mathematics",
+      "English",
+      "IYPT"
+    ],
+    "tel": "0954950724",
+    "ig": "https://instagram.com/studygram.jel",
+    "line": "0954950724",
+    "fb": "https://www.facebook.com/profile.php?id=100015603336134&mibextid=LQQJ4d",
     "active": true
   }
 ]

@@ -1,6 +1,9 @@
 
 import json
-text = "5/9/2022 14:47:15|Suphawit |Promkhot|5|https://drive.google.com/open?id=1epQqjFq37V78tLThctcVgUvOzI8UcUnT|344|Mathematics, English|0636254626|mac._.ma_c|suphawitmac|https://www.facebook.com/profile.php?id=100010924725986"
+text = "2/23/2023 19:22:35|Parncheewa|Toommakorn|6|https://drive.google.com/open?id=1C8Eg1X8WIKgQSSUNpvIjx2Zqk-R9Kg5S|396|Physics, Chemistry, Biology, Mathematics, English, IYPT|0954950724|studygram.jel|0954950724|https://www.facebook.com/profile.php?id=100015603336134&mibextid=LQQJ4d"
+
+
+# 2/23/2023 20:04:28|Passapan|Sanguanchua|6|https://drive.google.com/open?id=1LKZUBYBd1WAayofC9uVStHkPC75rS8LY|403|Physics, Mathematics, English|0951030440|pete_passapanja|petepassapan|
 row = text.split("|")
 data = []
 

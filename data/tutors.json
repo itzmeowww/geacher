@@ -215,5 +215,41 @@
     "line": "suphawitmac",
     "fb": "https://www.facebook.com/profile.php?id=100010924725986",
     "active": true
+  },
+  {
+    "firstname": "Parncheewa",
+    "lastname": "Toommakorn",
+    "batch": 6,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/6m396.png",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/6m396.png",
+    "id": "6m396",
+    "subjects": [
+      "Physics",
+      "Chemistry",
+      "Biology",
+      "Mathematics",
+      "English",
+      "IYPT"
+    ],
+    "tel": "0954950724",
+    "ig": "https://instagram.com/studygram.jel",
+    "line": "0954950724",
+    "fb": "https://www.facebook.com/profile.php?id=100015603336134&mibextid=LQQJ4d",
+    "active": true
+  },
+
+  {
+    "firstname": "Passapan",
+    "lastname": "Sanguanchua",
+    "batch": 6,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/6m403.jpeg",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/6m403.jpeg",
+    "id": "6m403",
+    "subjects": ["Physics", "Mathematics", "English"],
+    "tel": "0951030440",
+    "ig": "https://instagram.com/pete_passapanja",
+    "line": "petepassapan",
+    "fb": "",
+    "active": true
   }
 ]
