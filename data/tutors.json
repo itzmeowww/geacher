@@ -250,5 +250,19 @@
     "line": "petepassapan",
     "fb": "",
     "active": true
+  },
+  {
+    "firstname": "Aksadech ",
+    "lastname": "Limsuttipong ",
+    "batch": 6,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/6m427.jpg",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/6m427.jpg",
+    "id": "6m427",
+    "subjects": ["Physics", "Chemistry", "Mathematics", "English"],
+    "tel": "0939149453",
+    "ig": "https://instagram.com/Ice_aksadech",
+    "line": "ice2004.lim",
+    "fb": "https://www.facebook.com/aksadech.limsuttipong?mibextid=ZbWKwL",
+    "active": true
   }
 ]
