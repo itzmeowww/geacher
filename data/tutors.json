@@ -264,5 +264,21 @@
     "line": "ice2004.lim",
     "fb": "https://www.facebook.com/aksadech.limsuttipong?mibextid=ZbWKwL",
     "active": true
-  }
+  },
+  [
+    {
+      "firstname": "Manasanun ",
+      "lastname": "Hongchukiat",
+      "batch": 6,
+      "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/6m411.jpeg",
+      "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/6m411.jpeg",
+      "id": "6m411",
+      "subjects": ["Biology"],
+      "tel": "0949144321",
+      "ig": "https://instagram.com/neneunho_",
+      "line": "nene100548",
+      "fb": "https://www.facebook.com/manasanun.nene/",
+      "active": true
+    }
+  ]
 ]

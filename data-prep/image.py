@@ -5,15 +5,15 @@ path = os.getcwd()
 
 path = os.path.join(path, 'public', 'posters')
 
-target_file = "6m427.jpg"
+target_file = "6m411.jpeg"
 
 for name in os.listdir(path):
     if target_file == None or target_file == name:
         img = os.path.join(os.path.abspath(
             os.path.join('public', 'posters', name)))
-
+        print(img)
         im = Image.open(img)
-        im.thumbnail((800, 800), Image.ANTIALIAS)
+        im.thumbnail((800, 800), Image.LANCZOS)
         im.save(os.path.join('public', 'preview_posters', name), im.format)
 
 
@@ -25,7 +25,7 @@ for name in os.listdir(path):
             os.path.join('public', 'posters', name)))
 
         im = Image.open(img)
-        im.thumbnail((1080, 1080), Image.ANTIALIAS)
+        im.thumbnail((1080, 1080), Image.LANCZOS)
         im.save(os.path.join('public', 'resized_posters', name), im.format)
 
     # print(type(im.size))

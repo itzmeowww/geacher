@@ -1,16 +1,16 @@
 [
   {
-    "firstname": "Aksadech ",
-    "lastname": "Limsuttipong ",
+    "firstname": "Manasanun ",
+    "lastname": "Hongchukiat",
     "batch": 6,
-    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/6m427.jpg",
-    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/6m427.jpg",
-    "id": "6m427",
-    "subjects": ["Physics", "Chemistry", "Mathematics", "English"],
-    "tel": "0939149453",
-    "ig": "https://instagram.com/Ice_aksadech",
-    "line": "ice2004.lim",
-    "fb": "https://www.facebook.com/aksadech.limsuttipong?mibextid=ZbWKwL",
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/6m411.jpeg",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/6m411.jpeg",
+    "id": "6m411",
+    "subjects": ["Biology"],
+    "tel": "0949144321",
+    "ig": "https://instagram.com/neneunho_",
+    "line": "nene100548",
+    "fb": "https://www.facebook.com/manasanun.nene/",
     "active": true
   }
 ]

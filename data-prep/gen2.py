@@ -1,6 +1,6 @@
 
 import json
-text = "2/26/2023 0:14:09|Aksadech |Limsuttipong |6|https://drive.google.com/open?id=1eFIMwoIpKNgcTVsc8qWDd5_v7Te4tm5P|427|Physics, Chemistry, Mathematics, English|0939149453|Ice_aksadech|ice2004.lim|https://www.facebook.com/aksadech.limsuttipong?mibextid=ZbWKwL"
+text = "12/12/2023 20:40:28|Manasanun |Hongchukiat|6|https://drive.google.com/open?id=1UV7pc6QwprB1v6AhFmhSwpnOWFAyHoc4|411|Biology|0949144321|neneunho_|nene100548|https://www.facebook.com/manasanun.nene/"
 
 
 # 2/23/2023 20:04:28|Passapan|Sanguanchua|6|https://drive.google.com/open?id=1LKZUBYBd1WAayofC9uVStHkPC75rS8LY|403|Physics, Mathematics, English|0951030440|pete_passapanja|petepassapan|
