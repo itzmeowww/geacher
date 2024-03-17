@@ -1,9 +1,9 @@
 
 import json
-text = "12/12/2023 20:40:28|Manasanun |Hongchukiat|6|https://drive.google.com/open?id=1UV7pc6QwprB1v6AhFmhSwpnOWFAyHoc4|411|Biology|0949144321|neneunho_|nene100548|https://www.facebook.com/manasanun.nene/"
+text = "3/14/2024 13:55:20|Tisorn|Na Phattalung|7|https://drive.google.com/open?id=1tzJ7HWhppq4sDYvQptwqpoCpwFMp0erI|456|Physics, Mathematics|0835064821|ts_mon_nn|Mon25484911|https://www.facebook.com/tisorn.naphattalung?mibextid=opq0tG"
 
 
-# 2/23/2023 20:04:28|Passapan|Sanguanchua|6|https://drive.google.com/open?id=1LKZUBYBd1WAayofC9uVStHkPC75rS8LY|403|Physics, Mathematics, English|0951030440|pete_passapanja|petepassapan|
+
 row = text.split("|")
 data = []
 

@@ -279,5 +279,63 @@
     "line": "nene100548",
     "fb": "https://www.facebook.com/manasanun.nene/",
     "active": true
+  },
+
+  {
+    "firstname": "Surapa",
+    "lastname": "Panjaphakdee",
+    "batch": 7,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/7m499.png",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/7m499.png",
+    "id": "7m499",
+    "subjects": ["Biology"],
+    "tel": "0823709444",
+    "ig": "https://instagram.com/bio_surapa",
+    "line": "surapa0018",
+    "fb": "https://www.facebook.com/bio.surapa",
+    "active": true
+  },
+  {
+    "firstname": "Kiwii",
+    "lastname": "Academy",
+    "batch": 7,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/7m447.png",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/7m447.png",
+    "id": "7m447",
+    "subjects": ["Physics", "Chemistry", "Biology", "Mathematics"],
+    "tel": "0956169306",
+    "ig": "https://instagram.com/kiwii.academy",
+    "line": "captnakrab31122548",
+    "fb": "https://www.facebook.com/profile.php?id=61556563211228",
+    "active": true
+  },
+
+  {
+    "firstname": "Yanisa",
+    "lastname": "Sawangsin",
+    "batch": 7,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/7m448.jpg",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/7m448.jpg",
+    "id": "7m448",
+    "subjects": ["Chemistry", "Medical"],
+    "tel": "0648213431",
+    "ig": "https://instagram.com/_ea.earn.rn_",
+    "line": "earn-yanisa0710",
+    "fb": "https://www.facebook.com/share/morUHjZdZ75DpNoN/?mibextid=dGKdO6",
+    "active": true
+  },
+  {
+    "firstname": "Tisorn",
+    "lastname": "Na Phattalung",
+    "batch": 7,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/7m456.jpeg",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/7m456.jpeg",
+    "id": "7m456",
+    "subjects": ["Physics", "Mathematics"],
+    "tel": "0835064821",
+    "ig": "https://instagram.com/ts_mon_nn",
+    "line": "Mon25484911",
+    "fb": "https://www.facebook.com/tisorn.naphattalung?mibextid=opq0tG",
+    "active": true
   }
 ]
