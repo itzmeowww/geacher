@@ -5,7 +5,7 @@ path = os.getcwd()
 
 path = os.path.join(path, 'public', 'posters')
 
-target_file = "7m456.jpeg"
+target_file = "7m436.png"
 
 for name in os.listdir(path):
     if target_file == None or target_file == name:

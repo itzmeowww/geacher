@@ -1,8 +1,5 @@
-
 import json
-text = "3/14/2024 13:55:20|Tisorn|Na Phattalung|7|https://drive.google.com/open?id=1tzJ7HWhppq4sDYvQptwqpoCpwFMp0erI|456|Physics, Mathematics|0835064821|ts_mon_nn|Mon25484911|https://www.facebook.com/tisorn.naphattalung?mibextid=opq0tG"
-
-
+text = "8/8/2024 23:49:04|Kasamaphorn|Sutapak|7|https://drive.google.com/open?id=1eXQ2ccEVfwdv9hoVla--F50YGpTheuIU|436|Chemistry|+66993622044|sukhumnumnim |piinzung|https://www.facebook.com/kasamaphornzung?mibextid=LQQJ4d"
 
 row = text.split("|")
 data = []

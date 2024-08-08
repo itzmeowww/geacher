@@ -337,5 +337,34 @@
     "line": "Mon25484911",
     "fb": "https://www.facebook.com/tisorn.naphattalung?mibextid=opq0tG",
     "active": true
+  },
+
+  {
+    "firstname": "Purinut",
+    "lastname": "Larpsiriwatkul",
+    "batch": 7,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/7m488.png",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/7m488.png",
+    "id": "7m488",
+    "subjects": ["Physics", "Mathematics"],
+    "tel": "0945484464",
+    "ig": "https://instagram.com/jobpurii__",
+    "line": "job56513",
+    "fb": "",
+    "active": true
+  },
+  {
+    "firstname": "Kasamaphorn",
+    "lastname": "Sutapak",
+    "batch": 7,
+    "poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/resized_posters/7m436.png",
+    "thumbnail_poster": "https://raw.githubusercontent.com/itzmeowww/geacher/main/public/preview_posters/7m436.png",
+    "id": "7m436",
+    "subjects": ["Chemistry"],
+    "tel": "+66993622044",
+    "ig": "https://instagram.com/sukhumnumnim ",
+    "line": "piinzung",
+    "fb": "https://www.facebook.com/kasamaphornzung?mibextid=LQQJ4d",
+    "active": true
   }
 ]
